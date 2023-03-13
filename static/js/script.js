@@ -1,0 +1,3 @@
+/*
+    jQuery for MaterializeCSS initialization
+*/
