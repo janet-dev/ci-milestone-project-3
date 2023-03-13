@@ -97,6 +97,15 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    # session.clear()  # to remove all session cookies applicable to this app
+    session.pop("user")  # to only remove session cookie for 'user'
+    return redirect(url_for("login"))
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
