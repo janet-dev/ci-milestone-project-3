@@ -1,3 +1,11 @@
 /*
     Custom CSS
 */
+
+.text-shadow {
+    text-shadow: 2px 2px 2px #00000080;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
