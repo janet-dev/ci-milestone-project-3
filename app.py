@@ -106,6 +106,24 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/add_plant", methods=["GET", "POST"])
+def add_plant():
+    if request.method == "POST":
+        plant = {
+            "category_name": request.form.get("category_name"),
+            "plant_name": request.form.get("task_name"),
+            "plant_description": request.form.get("task_description"),
+            "sow": request.form.get("sow"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(task)
+        flash("Task Successively Added")
+        return redirect(url_for("get_plants"))
+
+    categories = mongo.db.categories.find().sort("category_name")
+    return render_template("add_plant.html", categories=categories)
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
