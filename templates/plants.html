@@ -1,14 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for plant in plants %}
-        {{ plant.plant_name }}<br>
-        {{ plant.category_name }}<br>
-        {{ plant.plant_description }}<br>
-        {{ plant.sow }}<br>
-        {{ plant.edible }}<br>
-        {{ plant.animal }}<br>
-        {{ plant.harvest }}<br>
-    {% endfor %}
-
+    {% if plants|length > 0 %}
+        {% for plant in plants %}
+            <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{ plant.link }}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator teal-text text-darken-4">
+                        <strong>{{ plant.plant_name }}</strong> | Sow: {{ plant.sow }}
+                        <i class="fas fa-caret-up right tooltipped" data-position="left" data-tooltip="Reveal"></i>
+                    </span>
+                    <p><a href="{{ plant.link }}" target="_blank">Photo</a></p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title teal-text text-darken-4">
+                        <strong>{{ plant.plant_name }}</strong> | Sow: {{ plant.sow }}
+                        <i class="fas fa-caret-down right tooltipped" data-position="left" data-tooltip="Hide"></i>
+                    </span>
+                    <p><strong>Description:</strong><br>
+                        {{ plant.plant_description }}
+                    </p>
+                    <ul>
+                        <li><strong>Category: </strong>{{ plant.category_name }}</li>
+                        <li><strong>Position: </strong>{{ plant.location }}</li>
+                        <li><strong>Harvest: </strong>{{ plant.harvest }}</li>
+                        <li><strong>Edible: </strong>{{ plant.edible }}</li>
+                        <li><strong>Feed for: </strong>{{ plant.animal }}</li>
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h3 class="red-text text-darken-4 center-align">No Plants Found</h3>
+    {% endif %}
+        
 {% endblock %}
