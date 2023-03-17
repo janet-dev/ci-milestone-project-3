@@ -111,19 +111,20 @@ def add_plant():
     if request.method == "POST":
         plant = {
             "category_name": request.form.get("category_name"),
-            "plant_name": request.form.get("task_name"),
-            "plant_description": request.form.get("task_description"),
+            "plant_name": request.form.get("plant_name"),
+            "plant_description": request.form.get("plant_description"),
             "sow": request.form.get("sow"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.insert_one(plant)
-        flash("Task Successively Added")
+        mongo.db.plants.insert_one(plant)
+        flash("Plant Successively Added")
         return redirect(url_for("get_plants"))
 
-    categories = mongo.db.categories.find().sort("category_name")
+    categories = mongo.db.categories.find().sort("category_name", 1)
     months = mongo.db.months.find()
 
-    return render_template("add_plant.html", categories=categories, months=months)
+    return render_template(
+        "add_plant.html", categories=categories, months=months)
 
 
 if __name__ == "__main__":
