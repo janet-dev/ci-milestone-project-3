@@ -116,12 +116,14 @@ def add_plant():
             "sow": request.form.get("sow"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.insert_one(task)
+        mongo.db.tasks.insert_one(plant)
         flash("Task Successively Added")
         return redirect(url_for("get_plants"))
 
     categories = mongo.db.categories.find().sort("category_name")
-    return render_template("add_plant.html", categories=categories)
+    months = mongo.db.months.find()
+
+    return render_template("add_plant.html", categories=categories, months=months)
 
 
 if __name__ == "__main__":
