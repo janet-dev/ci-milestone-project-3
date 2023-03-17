@@ -109,11 +109,15 @@ def logout():
 @app.route("/add_plant", methods=["GET", "POST"])
 def add_plant():
     if request.method == "POST":
+        is_edible = "on" if request.form.get("is_edible") else "off"
         plant = {
             "category_name": request.form.get("category_name"),
             "plant_name": request.form.get("plant_name"),
             "plant_description": request.form.get("plant_description"),
             "sow": request.form.get("sow"),
+            "is_edible": is_edible,
+            "animal_name": request.form.get("animal_name"),
+            "link": request.form.get("link"),
             "created_by": session["user"]
         }
         mongo.db.plants.insert_one(plant)
@@ -122,9 +126,10 @@ def add_plant():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     months = mongo.db.months.find()
+    animals = mongo.db.animals.find().sort("animal_name", 1)
 
     return render_template(
-        "add_plant.html", categories=categories, months=months)
+        "add_plant.html", categories=categories, months=months, animals=animals)
 
 
 if __name__ == "__main__":

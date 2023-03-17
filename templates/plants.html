@@ -9,7 +9,11 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title activator teal-text text-darken-4">
-                        <strong>{{ plant.plant_name }}</strong> | Sow: {{ plant.sow }}
+                        <strong>{{ plant.plant_name }}</strong> | Sow: <strong>{{ plant.sow }}</strong>
+                        {% if plant.is_edible == "on" %}
+                            <i class="fas fa-utensils teal-text text-lighten-2 tooltipped"
+                                data-position="right" data-tooltip="EDIBLE"></i>
+                        {% endif %}
                         <i class="fas fa-caret-up right tooltipped" data-position="left" data-tooltip="Reveal"></i>
                     </span>
                     <p><a href="{{ plant.link }}" target="_blank">Photo</a></p>
@@ -24,10 +28,7 @@
                     </p>
                     <ul>
                         <li><strong>Category: </strong>{{ plant.category_name }}</li>
-                        <li><strong>Position: </strong>{{ plant.location }}</li>
-                        <li><strong>Harvest: </strong>{{ plant.harvest }}</li>
-                        <li><strong>Edible: </strong>{{ plant.edible }}</li>
-                        <li><strong>Feed for: </strong>{{ plant.animal }}</li>
+                        <li><strong>Feed for: </strong>{{ plant.animal_name }}</li>
                     </ul>
                     <p><em>by: {{ plant.created_by }}</em></p>
                 </div>
