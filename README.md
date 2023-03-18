@@ -77,3 +77,32 @@ To log into the Heroku toolbelt CLI:
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
+
+## Credits
+
+A huge thank you to the following people and organisations, because without you, the website would not have been produced in it's present form.
+
+### From the Course
+
+Sample README and GitHub deployment instructions from [Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
+
+Markdown Cheatsheet from [Adam Pritchard](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html)
+
+### Media
+
+Plant images from [Dean Lewis](https://unsplash.com/@infinitecreations21) on Unsplash
+
+Cucumber plant image from [Kelly Neil](https://unsplash.com/@baconandbaileys) on Unsplash
+
+### Code
+
+Although the code is the work of the author, some of the code has been sourced from or inspired by others.
+
+Many of the references have been embedded as links throughout this document and indicated by the active blue text links.
+
+## Acknowledgements
+
+Rohit Sharma - [Code Institute](https://codeinstitute.net/) Mentor, for the continuous feedback and guidance in industry standards.
+
+Rachel Furlong - [EKC DigitalLearn](https://ekcgroup.ac.uk/business-units/ekc-digitallearn) Course Facilitator, for generous support and advice.
+ 
