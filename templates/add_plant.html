@@ -58,7 +58,7 @@
                         <label for="is_edible">
                             <input type="checkbox" id="is_edible" name="is_edible">
                             <span class="lever"></span>
-                            Is Edible
+                            Is Edible for Humans
                         </label>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-hippo prefix teal-text text-darken-4"></i>
                     <select id="animal_name" name="animal_name" class="validate" required>
-                        <option value="" disabled selected>Choose Pet Animal</option>
+                        <option value="" disabled selected>Choose Animal</option>
                         {% for animal in animals %}
                             <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
                         {% endfor %}
@@ -76,15 +76,24 @@
                     <label for="animal_name">Feed for</label>
                 </div>
             </div>
-            <!-- catalogue link -->
+            <!-- plant photo link -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="link" name="link" minlength="5" maxlength="150" type="text" class="validate"
                         required>
-                    <label for="link">Seed Catalogue Link</label>
+                    <label for="link">Plant Image Address</label>
                 </div>
             </div>
+            <!-- seed catalogue link -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-link prefix teal-text text-darken-4"></i>
+                    <input id="seed_link" name="seed_link" minlength="5" maxlength="150" type="text" class="validate"
+                        required>
+                    <label for="seed_link">Buy Seeds From</label>
+                </div>
+            </div>         
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">

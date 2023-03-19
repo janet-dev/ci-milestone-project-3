@@ -118,6 +118,7 @@ def add_plant():
             "is_edible": is_edible,
             "animal_name": request.form.get("animal_name"),
             "link": request.form.get("link"),
+            "seed_link": request.form.get("seed_link"),
             "created_by": session["user"]
         }
         mongo.db.plants.insert_one(plant)

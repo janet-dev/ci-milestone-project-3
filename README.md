@@ -128,6 +128,8 @@ Although the code is the work of the author, some of the code has been sourced f
 
 Many of the references have been embedded as links throughout this document and indicated by the active blue text links.
 
+Adding custom validation to Materialize dropdown by [Tim Nelson](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
+
 ## Acknowledgements
 
 Rohit Sharma - [Code Institute](https://codeinstitute.net/) Mentor, for the continuous feedback and guidance in industry standards.

@@ -15,18 +15,19 @@
                         <span class="card-title activator teal-text text-darken-4">
                             <strong>{{ plant.plant_name }}</strong>
                             {% if plant.is_edible == "on" %}
-                                <i class="fas fa-utensils teal-text text-lighten-2 tooltipped"
+                                <i class="fas fa-utensils teal-text text-darken-4 tooltipped"
                                     data-position="right" data-tooltip="EDIBLE"></i>
                             {% endif %}
                             <br>Sow: {{ plant.sow }}
-                            <i class="fas fa-caret-up right tooltipped" data-position="left" data-tooltip="Reveal"></i>
+                            <i class="fas fa-ellipsis-v right"></i>
                         </span>
-                        <p><a href="{{ plant.link }}" target="_blank">Seed Catalogue</a></p>
+                        <p><a href="{{ plant.seed_link }}" target="_blank">Seed Catalogue</a></p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title teal-text text-darken-4">
-                            <strong>{{ plant.plant_name }}</strong> | Sow: {{ plant.sow }}
-                            <i class="fas fa-caret-down right tooltipped" data-position="left" data-tooltip="Hide"></i>
+                            <strong>{{ plant.plant_name }}</strong>
+                            <br>Sow: {{ plant.sow }}
+                            <i class="fas fa-times right"></i>
                         </span>
                         <p><strong>Description:</strong><br>
                             {{ plant.plant_description }}
