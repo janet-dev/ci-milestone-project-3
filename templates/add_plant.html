@@ -46,7 +46,7 @@
                             <option value="{{ month.sow }}">{{ month.sow }}</option>
                         {% endfor %}
                     </select>
-                    <label for="sow">Sow</label>
+                    <label for="sow">Sow in</label>
                 </div>
             </div>
             <!-- is_edible toggle -->
@@ -73,16 +73,16 @@
                             <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="animal_name">Animal</label>
+                    <label for="animal_name">Feed for</label>
                 </div>
             </div>
-            <!-- plant photo link -->
+            <!-- catalogue link -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="link" name="link" minlength="5" maxlength="150" type="text" class="validate"
                         required>
-                    <label for="link">Link to Photo</label>
+                    <label for="link">Seed Catalogue Link</label>
                 </div>
             </div>
             <!-- submit button -->
