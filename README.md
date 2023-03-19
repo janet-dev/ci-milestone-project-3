@@ -57,6 +57,15 @@ As this is a brand new site with limited features, so the user stories were take
 
 ### Design
 
+### Wireframes
+
+Mobile
+
+Tablet
+<h2 align="left"><img src="docs/ux/wireframe-mp3.pdf"></h2>
+
+Desktop
+
 ## Gitpod Reminders
 
 To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
