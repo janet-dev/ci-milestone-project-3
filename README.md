@@ -61,10 +61,29 @@ As this is a brand new site with limited features, so the user stories were take
 
 Mobile
 
-Tablet
-<h2 align="left"><img src="docs/ux/wireframe-mp3.pdf"></h2>
+Tablet [wireframes](docs/ux/wireframe-mp3.pdf)
 
 Desktop
+
+### Non-Relational Database - MongoDB
+
+Tables (Collections)
+
+* Plants
+<h2 align="left"><img src="docs/pictures/table-plants.jpg"></h2>
+
+* Categories
+<h2 align="left"><img src="docs/pictures/table-categories.jpg"></h2>
+
+* Months
+<h2 align="left"><img src="docs/pictures/table-months.jpg"></h2>
+
+* Animals
+<h2 align="left"><img src="docs/pictures/table-animals.jpg"></h2>
+
+* Users
+<h2 align="left"><img src="docs/pictures/table-users.jpg"></h2>
+
 
 ## Gitpod Reminders
 
