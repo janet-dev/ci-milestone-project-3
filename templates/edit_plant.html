@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="teal-text text-darken-4 center-align">Edit Plant</h3>
+
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('edit_plant', plant_id=plant._id) }}">
+            <!-- category selection -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix teal-text text-darken-4"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Plant Category</label>
+                </div>
+            </div>
+            <!-- plant name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix teal-text text-darken-4"></i>
+                    <input id="plant_name" name="plant_name" minlength="5" maxlength="50" type="text" class="validate"
+                        required>
+                    <label for="plant_name">Plant Name</label>
+                </div>
+            </div>
+            <!-- plant description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix teal-text text-darken-4"></i>
+                    <textarea id="plant_description" name="plant_description" minlength="5" maxlength="200"
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="plant_description">Plant Description</label>
+                </div>
+            </div>
+            <!-- month dropdown for sowing -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
+                    <select id="sow" name="sow" class="validate" required>
+                        <option value="" disabled selected>Choose Month</option>
+                        {% for month in months %}
+                            <option value="{{ month.sow }}">{{ month.sow }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="sow">Sow in</label>
+                </div>
+            </div>
+            <!-- is_edible toggle -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- Switch -->
+                    <div class="switch">
+                        <i class="fas fa-utensils prefix teal-text text-darken-4"></i>
+                        <label for="is_edible">
+                            <input type="checkbox" id="is_edible" name="is_edible">
+                            <span class="lever"></span>
+                            Is Edible for Humans
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- dropdown for animals -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hippo prefix teal-text text-darken-4"></i>
+                    <select id="animal_name" name="animal_name" class="validate" required>
+                        <option value="" disabled selected>Choose Animal</option>
+                        {% for animal in animals %}
+                            <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="animal_name">Feed for</label>
+                </div>
+            </div>
+            <!-- plant photo link -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-link prefix teal-text text-darken-4"></i>
+                    <input id="link" name="link" minlength="5" maxlength="150" type="text" class="validate"
+                        required>
+                    <label for="link">Plant Image Address</label>
+                </div>
+            </div>
+            <!-- seed catalogue link -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-link prefix teal-text text-darken-4"></i>
+                    <input id="seed_link" name="seed_link" minlength="5" maxlength="150" type="text" class="validate"
+                        required>
+                    <label for="seed_link">Buy Seeds From</label>
+                </div>
+            </div>         
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large teal darken-1 text-shadow">
+                        Edit Plant <i class="fas fa-edit right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

@@ -130,7 +130,40 @@ def add_plant():
     animals = mongo.db.animals.find().sort("animal_name", 1)
 
     return render_template(
-        "add_plant.html", categories=categories, months=months, animals=animals)
+        "add_plant.html",
+        categories=categories,
+        months=months,
+        animals=animals)
+
+
+@app.route("/edit_plant/<plant_id>", methods=["GET", "POST"])
+def edit_plant(plant_id):
+    if request.method == "POST":
+        is_edible = "on" if request.form.get("is_edible") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "plant_name": request.form.get("plant_name"),
+            "plant_description": request.form.get("plant_description"),
+            "sow": request.form.get("sow"),
+            "is_edible": is_edible,
+            "animal_name": request.form.get("animal_name"),
+            "link": request.form.get("link"),
+            "seed_link": request.form.get("seed_link"),
+            "created_by": session["user"]
+        }
+        mongo.db.plants.replace_one({"_id": ObjectId(plant_id)}, submit)
+        flash("Plant Successively Updated")
+
+    plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
+    categories = mongo.db.categories.find().sort("category_name")
+    months = mongo.db.months.find()
+    animals = mongo.db.animals.find().sort("animal_name", 1)
+    return render_template(
+        "edit_plant.html",
+        plant=plant,
+        categories=categories,
+        months=months,
+        animals=animals)
 
 
 if __name__ == "__main__":
