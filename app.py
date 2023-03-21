@@ -166,6 +166,13 @@ def edit_plant(plant_id):
         animals=animals)
 
 
+@app.route("/delete_plant/<plant_id>")
+def delete_plant(plant_id):
+    mongo.db.plants.delete_one({"_id": ObjectId(plant_id)})
+    flash("Plant Successively Deleted")
+    return redirect(url_for("get_plants"))
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
