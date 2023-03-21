@@ -9,3 +9,10 @@
 .brand-logo {
     margin-left: 10px;
 }
+
+.plant-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+}

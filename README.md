@@ -124,6 +124,8 @@ Cucumber plant image from [Kelly Neil](https://unsplash.com/@baconandbaileys) on
 
 Forget-me-not image from [Noah Boyer](https://unsplash.com/@emerald_) on Unsplash
 
+Pineapple wearing sunglasses from [Heather Ford](https://unsplash.com/@the_modern_life_mrs) on Unsplash
+
 ### Code
 
 Although the code is the work of the author, some of the code has been sourced from or inspired by others.
