@@ -91,7 +91,9 @@ def profile(username):
 
     if session["user"]:
         # go to profile
-        return render_template("profile.html", username=username)
+        plants = list(mongo.db.plants.find())
+        return render_template(
+            "profile.html", username=username, plants=plants)
 
     # else go to login
     return redirect(url_for("login"))
