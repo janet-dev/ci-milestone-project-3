@@ -12,4 +12,5 @@
 
 .valign-wrapper {
     flex-wrap: wrap;
+    align-items: flex-start;
 }

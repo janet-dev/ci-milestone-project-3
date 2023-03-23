@@ -1,6 +1,7 @@
 import os
+from functools import wraps
 from flask import (
-    Flask, flash, render_template,
+    Flask, flash, g, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -17,6 +18,18 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+
+def login_required_admin(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if session["user"] == "admin":
+            return f(*args, **kwargs)
+        else:
+            flash("Access Denied")
+            return redirect(url_for('login'))
+
+    return decorated_function
 
 
 @app.route("/")
@@ -65,6 +78,7 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
+                session['logged_in'] = True
                 # send user to profile page
                 return redirect(url_for("profile", username=session["user"]))
             else:
@@ -176,12 +190,14 @@ def delete_plant(plant_id):
 
 
 @app.route("/get_categories")
+@login_required_admin
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
+@login_required_admin
 def add_category():
     if request.method == "POST":
         category = {
