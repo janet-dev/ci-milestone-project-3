@@ -126,6 +126,8 @@ Forget-me-not image from [Noah Boyer](https://unsplash.com/@emerald_) on Unsplas
 
 Pineapple wearing sunglasses from [Heather Ford](https://unsplash.com/@the_modern_life_mrs) on Unsplash
 
+Wallpaper for 404 page from [Maxim Berg](https://unsplash.com/@maxberg) on Unsplash
+
 ### Code
 
 Although the code is the work of the author, some of the code has been sourced from or inspired by others.

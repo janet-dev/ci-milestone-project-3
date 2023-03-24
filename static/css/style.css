@@ -16,14 +16,32 @@
 }
 
 /*------------------------------------ 404 page */
+.display-404 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
   
+.lead-404 {
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
 .hero-container {
     height: 100vh;
     width: 100%;
-    background: url("/static/img/page-404.png") no-repeat;
+    background: url("/static/img/page-404.jpg") no-repeat bottom right fixed;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-  }
+    font-size: larger;
+}
+
+#a-404 {
+    text-decoration-line: underline;
+    color: orangered;
+    text-shadow: 1px 1px #000;
+}
