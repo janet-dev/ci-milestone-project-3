@@ -18,14 +18,12 @@
 /*------------------------------------ 404 page */
 .display-404 {
     font-size: 48px;
-    color: #fff;
-    text-shadow: 1px 1px #000;
+    color: #004d40;
 }
   
 .lead-404 {
     font-weight: 400;
-    color: #fff;
-    text-shadow: 1px 1px #000;
+    color: #004d40;
 }
 
 .hero-container {
@@ -42,6 +40,5 @@
 
 #a-404 {
     text-decoration-line: underline;
-    color: orangered;
-    text-shadow: 1px 1px #000;
+    color: #01579b;
 }
