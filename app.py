@@ -38,6 +38,18 @@ def login_required_admin(f):
     return decorated_function
 
 
+def login_required_user(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "user" in session:
+            return f(*args, **kwargs)
+        else:
+            flash("You need to login")
+            return redirect(url_for('login'))
+
+    return decorated_function
+
+
 @app.route("/")
 @app.route("/get_plants")
 def get_plants():
@@ -120,6 +132,7 @@ def profile(username):
 
 
 @app.route("/logout")
+@login_required_user
 def logout():
     # remove user from session cookie
     flash("You have been logged out")
@@ -129,6 +142,7 @@ def logout():
 
 
 @app.route("/add_plant", methods=["GET", "POST"])
+@login_required_user
 def add_plant():
     if request.method == "POST":
         is_edible = "on" if request.form.get("is_edible") else "off"
