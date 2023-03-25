@@ -180,6 +180,13 @@ def add_plant():
 
 @app.route("/edit_plant/<plant_id>", methods=["GET", "POST"])
 def edit_plant(plant_id):
+    plant = plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
+
+    # Code from CI video DBMS Masterclass 2
+    if "user" not in session or session["user"] != plant["created_by"]:
+        flash("You can only edit your own tasks!")
+        return redirect(url_for("get_plants"))
+
     if request.method == "POST":
         is_edible = "on" if request.form.get("is_edible") else "off"
         submit = {
@@ -196,7 +203,6 @@ def edit_plant(plant_id):
         mongo.db.plants.replace_one({"_id": ObjectId(plant_id)}, submit)
         flash("Plant Successively Updated")
 
-    plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
     categories = mongo.db.categories.find().sort("category_name")
     months = mongo.db.months.find()
     animals = mongo.db.animals.find().sort("animal_name", 1)
@@ -210,6 +216,13 @@ def edit_plant(plant_id):
 
 @app.route("/delete_plant/<plant_id>")
 def delete_plant(plant_id):
+    plant = plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
+
+    # Code from CI video DBMS Masterclass 2
+    if "user" not in session or session["user"] != plant["created_by"]:
+        flash("You can only delete your own tasks!")
+        return redirect(url_for("get_plants"))
+
     mongo.db.plants.delete_one({"_id": ObjectId(plant_id)})
     flash("Plant Successively Deleted")
     return redirect(url_for("get_plants"))
