@@ -53,7 +53,7 @@ def login_required_user(f):
 @app.route("/")
 @app.route("/get_plants")
 def get_plants():
-    plants = list(mongo.db.plants.find())
+    plants = list(mongo.db.plants.find().sort("plant_name", 1))
     return render_template("plants.html", plants=plants)
 
 
@@ -148,7 +148,7 @@ def profile(username):
 
     if session["user"]:
         # go to profile
-        plants = list(mongo.db.plants.find())
+        plants = list(mongo.db.plants.find().sort("sow", 1))
         return render_template(
             "profile.html", username=username, plants=plants)
 
