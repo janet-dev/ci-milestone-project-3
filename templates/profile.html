@@ -1,14 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
-                <h3 class="center-align teal-text text-darken-4">
-                    {{ username|title }}'s Plants
-                </h3>
+    <h3 class="center-align teal-text text-darken-4">{{ username|title }}'s Plants</h3>
+
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('search_profile') }}" method="post" class="col s12">
+            <div class="valign-wrapper center-align">
+                <div class="input-field col l12">
+                    <i class="fas fa-search prefix teal-text text-darken-4"></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Plants</label>
+                </div>
             </div>
-        </div>
+            <div class="col l12">
+                <a href="{{ url_for('profile', username=session['user']) }}" class="red darken-4 btn text-shadow">Reset</a>
+                <button type="submit" class="teal darken-4 btn text-shadow">
+                    <i class="fas fa-search left"></i> Search
+                </button>
+            </div>           
+        </form>
     </div>
 
     {% if plants|length > 0 %}

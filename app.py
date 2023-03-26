@@ -69,6 +69,18 @@ def search():
     return render_template("plants.html", plants=plants)
 
 
+@app.route("/search_profile", methods=["GET", "POST"])
+def search_profile():
+    query = request.form.get("query")
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        plants = list(mongo.db.plants.find({"$text": {"$search": query}}))
+        return render_template(
+            "profile.html", username=username, plants=plants)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
