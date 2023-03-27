@@ -15,6 +15,14 @@
     align-items: flex-start;
 }
 
+.row .col.m6 {
+    margin-left: 0;
+}
+
+.row .col.l4 {
+    margin-left: 0;
+}
+
 /*------------------------------------ about page */
 .ul-about {
     list-style-type: square;

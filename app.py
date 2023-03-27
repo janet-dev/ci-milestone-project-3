@@ -148,7 +148,7 @@ def profile(username):
 
     if session["user"]:
         # go to profile
-        plants = list(mongo.db.plants.find().sort("sow", 1))
+        plants = list(mongo.db.plants.find().sort("plant_name", 1))
         return render_template(
             "profile.html", username=username, plants=plants)
 
