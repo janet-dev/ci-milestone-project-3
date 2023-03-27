@@ -60,7 +60,7 @@
                                     <a href="{{ url_for('delete_plant', plant_id=plant._id) }}" class="btn-small red darken-4">Delete</a>
                                 {% endif %}
                             </div>
-                            <p><em>by: {{ plant.created_by }}</em></p>
+                            <p><em>by: {{ plant.created_by|title }}</em></p>
                         </div>
                     </div>
                 </div>
