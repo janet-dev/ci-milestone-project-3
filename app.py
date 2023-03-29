@@ -22,13 +22,44 @@ mongo = PyMongo(app)
 
 @app.errorhandler(404)
 def page_not_found(e):
+    '''
+    An error handler is registered with the errorhandler() decorator
+    for the status code 404 for page not found. Further info from:
+    https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
+
+    :param e: error raised
+    :return: rendered template for the 404 page,
+    if an explicit error of 404 is raised
+    '''
     # note that we set the 404 status explicitly
     return render_template('404.html'), 404
 
 
 def login_required_admin(f):
+    '''
+    This defines the decorator to wrap any function 'f' that follows after it.
+    In this case, the decorator will wrap any following function
+    which requires 'admin' access.
+    e.g. functions get_categories() and add_category().
+    For more info see:
+    https://flask.palletsprojects.com/en/2.2.x/patterns/viewdecorators/
+    Tutorial:
+    https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/
+
+    :param f: function 'f' to be wrapped
+    :return: the decorated (or wrapped) function
+    '''
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        '''
+        Defines the wrap that is actually happening, which
+        asks if the user is logged in as 'admin'.
+
+        :param args: multiple arguments or
+        :param kwargs: keyword arguments
+        :return: wrapped function with its args/kwargs if 'admin' logged in,
+        otherwise flash 'Access Denied' and send user to the login page
+        '''
         if session["user"] == "admin":
             return f(*args, **kwargs)
         else:
@@ -39,8 +70,25 @@ def login_required_admin(f):
 
 
 def login_required_user(f):
+    '''
+    Defines the decorator will wrap any following function
+    which requires current 'user' access.
+    e.g. functions add_plant(), profile(username), logout()
+
+    :param f: function 'f' to be wrapped
+    :return: the decorated (or wrapped) function
+    '''
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        '''
+        Defines the wrap that is actually happening, which
+        asks if the user is logged in as current session 'user'.
+
+        :param args: multiple arguments or
+        :param kwargs: keyword arguments
+        :return: wrapped function with its args/kwargs if 'user' logged in,
+        otherwise flash 'Access Denied' and send user to the login page
+        '''
         if "user" in session:
             return f(*args, **kwargs)
         else:
