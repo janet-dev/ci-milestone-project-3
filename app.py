@@ -27,11 +27,10 @@ def page_not_found(e):
     for the status code 404 for page not found. Further info from:
     https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
 
-    :param e: error raised
-    :return: rendered template for the 404 page,
-    if an explicit error of 404 is raised
+    :param e:   error raised
+    :return:    rendered template for the 404 page,
+                if an explicit error of 404 is raised
     '''
-    # note that we set the 404 status explicitly
     return render_template('404.html'), 404
 
 
@@ -46,8 +45,8 @@ def login_required_admin(f):
     Tutorial:
     https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/
 
-    :param f: function 'f' to be wrapped
-    :return: the decorated (or wrapped) function
+    :param f:   function 'f' to be wrapped
+    :return:    the decorated (or wrapped) function
     '''
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -55,10 +54,10 @@ def login_required_admin(f):
         Defines the wrap that is actually happening, which
         asks if the user is logged in as 'admin'.
 
-        :param args: multiple arguments or
-        :param kwargs: keyword arguments
-        :return: wrapped function with its args/kwargs if 'admin' logged in,
-        otherwise flash 'Access Denied' and send user to the login page
+        :param args:    multiple arguments or
+        :param kwargs:  keyword arguments
+        :return:    wrapped function with its args/kwargs if 'admin' logged in,
+                    or login route
         '''
         if session["user"] == "admin":
             return f(*args, **kwargs)
@@ -75,8 +74,8 @@ def login_required_user(f):
     which requires current 'user' access.
     e.g. functions add_plant(), profile(username), logout()
 
-    :param f: function 'f' to be wrapped
-    :return: the decorated (or wrapped) function
+    :param f:   function 'f' to be wrapped
+    :return:    the decorated (or wrapped) function
     '''
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -86,8 +85,8 @@ def login_required_user(f):
 
         :param args: multiple arguments or
         :param kwargs: keyword arguments
-        :return: wrapped function with its args/kwargs if 'user' logged in,
-        otherwise flash 'Access Denied' and send user to the login page
+        :return:    wrapped function with its args/kwargs if 'user' logged in,
+                    or login route
         '''
         if "user" in session:
             return f(*args, **kwargs)
@@ -101,17 +100,35 @@ def login_required_user(f):
 @app.route("/")
 @app.route("/get_plants")
 def get_plants():
+    '''
+    This function collects all the plant info from MongoDB.
+    This will be used for the home page
+
+    :return:    Rendered home page, displaying all plants
+    '''
     plants = list(mongo.db.plants.find().sort("plant_name", 1))
     return render_template("plants.html", plants=plants)
 
 
 @app.route("/about")
 def about():
+    '''
+    This function displays the About and Instructions page
+
+    :return:    Rendered about page
+    '''
     return render_template("about.html")
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    '''
+    This function enables the user to search through all plants
+    using key words in the fields plant name, description,
+    sow month and animal to feed.
+
+    :return:    Rendered home page with the filtered plants
+    '''
     query = request.form.get("query")
     plants = list(mongo.db.plants.find({"$text": {"$search": query}}))
     return render_template("plants.html", plants=plants)
@@ -119,6 +136,13 @@ def search():
 
 @app.route("/search_profile", methods=["GET", "POST"])
 def search_profile():
+    '''
+    This function enables the user to search through their own plants
+    using key words in the fields plant name, description,
+    sow month and animal to feed.
+
+    :return:    Rendered profile page with the filtered plants
+    '''
     query = request.form.get("query")
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -131,8 +155,19 @@ def search_profile():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    '''
+    This function enables new users to register their name and password,
+    in order to create their own profile page.
+    Initially the function checks if the user exists,
+    if yes, they are told this and the register page reloads.
+    Otherwise the username and hashed password are added to the database.
+    New user's name is put into the session cookie and 
+    they are sent to their profile page.
+
+    :return:    register route, or
+                profile route for new user
+    '''
     if request.method == "POST":
-        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -140,84 +175,105 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        # else register user and hash the password
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
 
-        # put new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration successful!")
-        # send user to profile page
         return redirect(url_for("profile", username=session["user"]))
+
     return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    '''
+    This function initially checks the db if the user is already registered;
+    if yes, the password is verified and they are greeted
+    with a welcome message on their profile page.
+    Otherwise they are directed to the register page if user does not exist
+    or the login page if the password is incorrect
+
+    :return:    profile route if login successful, or
+                login route if password incorrect, or
+                register route if user does not exist
+    '''
     if request.method == "POST":
-        # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username").capitalize()))
                 session['logged_in'] = True
-                # send user to profile page
                 return redirect(url_for("profile", username=session["user"]))
             else:
-                # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
-        else:
-            # existing username does not exist
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+        flash("Incorrect Username and/or Password")
+        return redirect(url_for("login"))
 
-    # Don't need to write any logic for an 'else' statement here
-    # it defaults to the "GET" method,
-    # which acts automatically as the 'else' condition
     return render_template("login.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 @login_required_user
 def profile(username):
-    # grab the session user's username from the database
+    '''
+    This function is wrapped with decorator which enforces user security
+    for protecting post owners.
+    Plant info is fetched from the db for the current logged in user.
+
+    :param username:    session user's username retrieved from db
+    :return:    rendered profile page for current user, or
+                login route if not
+    '''
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        # go to profile
         plants = list(mongo.db.plants.find().sort("plant_name", 1))
         return render_template(
             "profile.html", username=username, plants=plants)
 
-    # else go to login
     return redirect(url_for("login"))
 
 
 @app.route("/logout")
 @login_required_user
 def logout():
-    # remove user from session cookie
+    '''
+    This function is wrapped with decorator which enforces user security
+    - a user who is not logged in, should not be able to log out.
+    The current user will be removed from the session on logout and
+    redirected to the login page.
+
+    :return: login route
+    '''
     flash("You have been logged out")
-    # session.clear()  # to remove all session cookies applicable to this app
-    session.pop("user")  # to only remove session cookie for 'user'
+    session.pop("user")
     return redirect(url_for("login"))
 
 
 @app.route("/add_plant", methods=["GET", "POST"])
 @login_required_user
 def add_plant():
+    '''
+    This function is wrapped with decorator which enforces user security
+    for protecting post owners.
+    This functionality enables the user to add plants to their profile page,
+    via the Add Plant form. If the form is submitted, then the plant dictionary
+    is written to the database.
+
+    :return: home page route
+    '''
     if request.method == "POST":
         is_edible = "on" if request.form.get("is_edible") else "off"
         plant = {
@@ -248,6 +304,13 @@ def add_plant():
 
 @app.route("/edit_plant/<plant_id>", methods=["GET", "POST"])
 def edit_plant(plant_id):
+    '''
+    This function enables the user to edit their own plants,
+    via the Edit Plant form. If the form is submitted, then the plant
+    dictionary is written to the database.
+
+    :return:    home page route
+    '''
     plant = plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
 
     # Code from CI video DBMS Masterclass 2
@@ -270,10 +333,12 @@ def edit_plant(plant_id):
         }
         mongo.db.plants.replace_one({"_id": ObjectId(plant_id)}, submit)
         flash("Plant Successively Updated")
+        return redirect(url_for("get_plants"))
 
     categories = mongo.db.categories.find().sort("category_name")
     months = mongo.db.months.find()
     animals = mongo.db.animals.find().sort("animal_name", 1)
+
     return render_template(
         "edit_plant.html",
         plant=plant,
@@ -284,6 +349,12 @@ def edit_plant(plant_id):
 
 @app.route("/delete_plant/<plant_id>")
 def delete_plant(plant_id):
+    '''
+    This function enables the user to delete their own plants,
+    via the Delete button on their plant card.
+
+    :return:    home page route
+    '''
     plant = plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
 
     # Code from CI video DBMS Masterclass 2
@@ -299,6 +370,13 @@ def delete_plant(plant_id):
 @app.route("/get_categories")
 @login_required_admin
 def get_categories():
+    '''
+    This function is wrapped with decorator which enforces admin security
+    for protecting the administrator tasks.
+    Only the admin can view the categories page.
+
+    :return:    rendered categories page for admin user only
+    '''
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
@@ -306,6 +384,13 @@ def get_categories():
 @app.route("/add_category", methods=["GET", "POST"])
 @login_required_admin
 def add_category():
+    '''
+    This function is wrapped with decorator which enforces admin security
+    for protecting the administrator tasks.
+    Only the admin can view and add a category.
+
+    :return:    rendered categories page for admin user only
+    '''
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
