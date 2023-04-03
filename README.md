@@ -57,6 +57,14 @@ As this is a brand new site with limited features, so the user stories were take
 
 ### Design
 
+#### The CRUD App
+
+- This app was inspired by the Code Institute backend development tutorial for [Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth), by Tim Nelson.
+
+- What is a CRUD app? This type of app allows the user to create, read, update and delete records or posts in a database via graphical interface. In this case the database is MongoDB and as the app is developed with [Python 3.8.11](https://www.python.org/downloads/release/python-3811/), the graphical interface is provided by HTML and the mini-framework, [Flask 2.2](https://flask.palletsprojects.com/en/2.2.x/) with [Materialize CSS 1.0.0](https://materializecss.com/).
+
+- Why this app? Our household has an allotment and every year in the early spring, we excitely purchase lots of seeds for pretty flowers and delicious vegetables. These precious packets are then stored in a 'safe place' until the time comes for sowing. As usual - out of sight, out of mind - these seeds get forgotten about until it is too late. So I developed this app for like minded folk - here we can create our plant seed posts stating in which month they can be sown. A search facility on keywords allows the user to both search their own entries and others. The home does not require login, but profile pages do. All entries are visible to every one, but only the post owner can edit or delete them. 
+
 ### Wireframes
 
 Mobile
