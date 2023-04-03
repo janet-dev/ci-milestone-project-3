@@ -1,7 +1,23 @@
+"""
+Diploma in Web Application Development: Backend (Data Centric) Development
+Milestone Project 3 :   CRUD app developed with the Flask mini-framework,
+                        Materialize CSS and Mongo Atlas Database.
+                        This MVP app allows registered users to store
+                        information on plant seeds they wish to sow for the
+                        coming year. A search facility enables them to see
+                        which seeds should be sown in a particular month or
+                        which plants are suitable as animal feed.
+File name:  app.py
+Created:    April, 2023
+Author:     Janet Dornan
+Credit:     Tim Nelson, Code Institite
+Source:     https://github.com/Code-Institute-Solutions/TaskManagerAuth
+"""
+
 import os
 from functools import wraps
 from flask import (
-    Flask, flash, g, render_template,
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -21,22 +37,22 @@ mongo = PyMongo(app)
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(error_404):
     '''
     An error handler is registered with the errorhandler() decorator
     for the status code 404 for page not found. Further info from:
     https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
 
-    :param e:   error raised
+    :param error_404:   error raised
     :return:    rendered template for the 404 page,
                 if an explicit error of 404 is raised
     '''
     return render_template('404.html'), 404
 
 
-def login_required_admin(f):
+def login_required_admin(func):
     '''
-    This defines the decorator to wrap any function 'f' that follows after it.
+    This defines the decorator to wrap any function 'func' that follows it.
     In this case, the decorator will wrap any following function
     which requires 'admin' access.
     e.g. functions get_categories() and add_category().
@@ -45,10 +61,10 @@ def login_required_admin(f):
     Tutorial:
     https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/
 
-    :param f:   function 'f' to be wrapped
+    :param func:   function 'func' to be wrapped
     :return:    the decorated (or wrapped) function
     '''
-    @wraps(f)
+    @wraps(func)
     def decorated_function(*args, **kwargs):
         '''
         Defines the wrap that is actually happening, which
@@ -60,24 +76,23 @@ def login_required_admin(f):
                     or login route
         '''
         if session["user"] == "admin":
-            return f(*args, **kwargs)
-        else:
-            flash("Access Denied")
-            return redirect(url_for('login'))
+            return func(*args, **kwargs)
+        flash("Access Denied")
+        return redirect(url_for('login'))
 
     return decorated_function
 
 
-def login_required_user(f):
+def login_required_user(func):
     '''
     Defines the decorator will wrap any following function
     which requires current 'user' access.
     e.g. functions add_plant(), profile(username), logout()
 
-    :param f:   function 'f' to be wrapped
-    :return:    the decorated (or wrapped) function
+    :param func:    function 'func' to be wrapped
+    :return:        the decorated (or wrapped) function
     '''
-    @wraps(f)
+    @wraps(func)
     def decorated_function(*args, **kwargs):
         '''
         Defines the wrap that is actually happening, which
@@ -89,10 +104,9 @@ def login_required_user(f):
                     or login route
         '''
         if "user" in session:
-            return f(*args, **kwargs)
-        else:
-            flash("You need to login")
-            return redirect(url_for('login'))
+            return func(*args, **kwargs)
+        flash("You need to login")
+        return redirect(url_for('login'))
 
     return decorated_function
 
@@ -152,6 +166,9 @@ def search_profile():
         return render_template(
             "profile.html", username=username, plants=plants)
 
+    plants = list(mongo.db.plants.find().sort("plant_name", 1))
+    return render_template("plants.html", plants=plants)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -161,7 +178,7 @@ def register():
     Initially the function checks if the user exists,
     if yes, they are told this and the register page reloads.
     Otherwise the username and hashed password are added to the database.
-    New user's name is put into the session cookie and 
+    New user's name is put into the session cookie and
     they are sent to their profile page.
 
     :return:    register route, or
@@ -175,11 +192,11 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        register = {
+        register_user = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(register)
+        mongo.db.users.insert_one(register_user)
 
         session["user"] = request.form.get("username").lower()
         flash("Registration successful!")
@@ -209,13 +226,12 @@ def login():
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(
-                    request.form.get("username").capitalize()))
+                welcome = request.form.get("username").capitalize()
+                flash(f"Welcome, {welcome}")
                 session['logged_in'] = True
                 return redirect(url_for("profile", username=session["user"]))
-            else:
-                flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
 
         flash("Incorrect Username and/or Password")
         return redirect(url_for("login"))
