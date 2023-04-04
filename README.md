@@ -53,17 +53,57 @@ As this is a brand new site with limited features, so the user stories were take
 * I would like to build a Flask app.
 * I would like to allow users to store their data via the app.
 * I would like to build a community gardening app to also assist pet owners.
-* I would like the ap to be visually attractive and fun to use.
+* I would like the app to be visually attractive and fun to use.
 
 ### Design
 
 #### The CRUD App
 
-- This app was inspired by the Code Institute backend development tutorial for [Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth), by Tim Nelson.
+- This app was inspired by the Code Institute backend development tutorial for a [Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth), by Tim Nelson.
 
-- What is a CRUD app? This type of app allows the user to create, read, update and delete records or posts in a database via graphical interface. In this case the database is MongoDB and as the app is developed with [Python 3.8.11](https://www.python.org/downloads/release/python-3811/), the graphical interface is provided by HTML and the mini-framework, [Flask 2.2](https://flask.palletsprojects.com/en/2.2.x/) with [Materialize CSS 1.0.0](https://materializecss.com/).
+- What is a CRUD app? This type of app allows the user to create, read, update and delete records or posts in a database via graphical interface. In this case the database is [MongoDB Atlas 5.0.15](https://www.mongodb.com/atlas) and as the app is developed with [Python 3.8.11](https://www.python.org/downloads/release/python-3811/), the graphical interface is provided by HTML5 and the mini-framework, [Flask 2.2](https://flask.palletsprojects.com/en/2.2.x/) with [Materialize CSS 1.0.0](https://materializecss.com/).
 
 - Why this app? Our household has an allotment and every year in the early spring, we excitely purchase lots of seeds for pretty flowers and delicious vegetables. These precious packets are then stored in a 'safe place' until the time comes for sowing. As usual - out of sight, out of mind - these seeds get forgotten about until it is too late. So I developed this app for like minded folk - here we can create our plant seed posts stating in which month they can be sown. A search facility on keywords allows the user to both search their own entries and others. The home does not require login, but profile pages do. All entries are visible to every one, but only the post owner can edit or delete them. 
+
+- View the website design flowchart to see which Python functions are associated with which web pages of the app:
+
+<h2 align="left"><img src="docs/pictures/design-site.jpg"></h2>
+
+These functions are:
+
+1. **page_not_found(error_404)** - An error handler is registered with the Flask errorhandler() decorator
+    for the status code 404 when a page is not found. See [Custom Error Pages](https://flask.palletsprojects.com/en/2.2.x/errorhandling/) for further information. 
+
+2. **login_required_admin(func)** - 
+
+3. **login_required_user(func)** -
+
+4. **get_plants()** - 
+
+5. **about()** - 
+
+6. **search()** - 
+
+7. **search_profile()** - 
+
+8. **register()** - 
+
+9. **login()** - 
+
+10. **profile(username)** - 
+
+11. **logout()** - 
+
+12. **add_plant()** - 
+
+13. **edit_plant(plant_id)** - 
+
+14. **delete_plant(plant_id)** - 
+
+15. **get_categories()** - 
+
+16. **add_category()** - 
+    
 
 ### Wireframes
 
@@ -75,22 +115,26 @@ Desktop
 
 ### Non-Relational Database - MongoDB
 
+Database Entity Relationship Diagram
+
+<h2 align="left"><img src="docs/pictures/db-erd.jpg"></h2>
+
 Tables (Collections)
 
 * Plants
-<h2 align="left"><img src="docs/pictures/table-plants.jpg"></h2>
+<h2 align="left"><img src="docs/pictures/db-plants.jpg"></h2>
 
 * Categories
-<h2 align="left"><img src="docs/pictures/table-categories.jpg"></h2>
+<h2 align="left"><img src="docs/pictures/db-categories.jpg"></h2>
 
 * Months
-<h2 align="left"><img src="docs/pictures/table-months.jpg"></h2>
+<h2 align="left"><img src="docs/pictures/db-months.jpg"></h2>
 
 * Animals
-<h2 align="left"><img src="docs/pictures/table-animals.jpg"></h2>
+<h2 align="left"><img src="docs/pictures/db-animals.jpg"></h2>
 
 * Users
-<h2 align="left"><img src="docs/pictures/table-users.jpg"></h2>
+<h2 align="left"><img src="docs/pictures/db-users.jpg"></h2>
 
 
 ## Gitpod Reminders
@@ -120,7 +164,9 @@ A huge thank you to the following people and organisations, because without you,
 
 ### From the Course
 
-Sample README and GitHub deployment instructions from [Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
+Sample README from [Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
+
+Heroku deployment instructions from Code Institute video tutorial
 
 Markdown Cheatsheet from [Adam Pritchard](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html)
 

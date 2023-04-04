@@ -41,7 +41,7 @@ def page_not_found(error_404):
     '''
     An error handler is registered with the errorhandler() decorator
     for the status code 404 for page not found. Further info from:
-    https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
+    https://flask.palletsprojects.com/en/2.2.x/errorhandling/
 
     :param error_404:   error raised
     :return:    rendered template for the 404 page,
@@ -423,4 +423,3 @@ if __name__ == "__main__":
         host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
         debug=True)
-# on final deployment change to *** debug=False ***
