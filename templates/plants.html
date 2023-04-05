@@ -37,6 +37,10 @@
                                         data-position="right" data-tooltip="EDIBLE"></i>
                                 {% endif %}
                                 <br>Sow: {{ plant.sow }}
+                                {% if plant.is_done == "on" %}
+                                    <i class="fas fa-check-square amber-text text-darken-4 tooltipped"
+                                        data-position="right" data-tooltip="DONE"></i>
+                                {% endif %}
                                 <i class="fas fa-ellipsis-v right"></i>
                             </span>
                             <p><a href="{{ plant.seed_link }}" target="_blank">Seed Catalogue</a></p>

@@ -5,6 +5,24 @@
 
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_plant', plant_id=plant._id) }}">
+            <!-- is_done toggle -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- Switch -->
+                    <div class="switch">
+                        <i class="fas fa-check-square prefix teal-text text-darken-4"></i>
+                        <label for="is_done">
+                            {% if plant.is_done == "on" %}
+                                <input type="checkbox" id="is_done" name="is_done" checked>
+                            {% else %}
+                                <input type="checkbox" id="is_done" name="is_done">
+                            {% endif %}
+                            <span class="lever"></span>
+                            Seeds Sown
+                        </label>
+                    </div>
+                </div>
+            </div>
             <!-- category selection -->
             <div class="row">
                 <div class="input-field col s12">
@@ -72,7 +90,7 @@
                                 <input type="checkbox" id="is_edible" name="is_edible">
                             {% endif %}
                             <span class="lever"></span>
-                            Is Edible for Humans
+                            Edible for Humans
                         </label>
                     </div>
                 </div>
@@ -109,7 +127,7 @@
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="seed_link" name="seed_link" minlength="5" maxlength="150" 
                     value="{{ plant.seed_link }}" type="text" class="validate" required>
-                    <label for="seed_link">Buy Seeds From</label>
+                    <label for="seed_link">Buy Seeds from</label>
                 </div>
             </div>         
             <!-- submit button -->
@@ -119,7 +137,7 @@
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
                     <button type="submit" class="btn-large teal darken-4 text-shadow">
-                        Edit Plant <i class="fas fa-edit right"></i>
+                        Update <i class="fas fa-edit right"></i>
                     </button>
                 </div>
             </div>

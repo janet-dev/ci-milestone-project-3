@@ -292,11 +292,14 @@ def add_plant():
     '''
     if request.method == "POST":
         is_edible = "on" if request.form.get("is_edible") else "off"
+        is_done = "on" if request.form.get("is_done") else "off"
+
         plant = {
             "category_name": request.form.get("category_name"),
             "plant_name": request.form.get("plant_name"),
             "plant_description": request.form.get("plant_description"),
             "sow": request.form.get("sow"),
+            "is_done": is_done,
             "is_edible": is_edible,
             "animal_name": request.form.get("animal_name"),
             "link": request.form.get("link"),
@@ -336,12 +339,14 @@ def edit_plant(plant_id):
 
     if request.method == "POST":
         is_edible = "on" if request.form.get("is_edible") else "off"
+        is_done = "on" if request.form.get("is_done") else "off"
         submit = {
             "category_name": request.form.get("category_name"),
             "plant_name": request.form.get("plant_name"),
             "plant_description": request.form.get("plant_description"),
             "sow": request.form.get("sow"),
             "is_edible": is_edible,
+            "is_done": is_done,
             "animal_name": request.form.get("animal_name"),
             "link": request.form.get("link"),
             "seed_link": request.form.get("seed_link"),
