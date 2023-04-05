@@ -69,7 +69,13 @@ As this is a brand new site with limited features, so the user stories were take
 
 <h2 align="left"><img src="docs/pictures/design-site.jpg"></h2>
 
-These functions are:
+Flask uses the route() decorator to bind a function to a URL. For example:
+```Python
+@app.route('/')
+def index():
+    return 'Index Page'
+```
+These functions used in this app are:
 
 1. **page_not_found(error_404)** - An error handler is registered with the Flask errorhandler() decorator
     for the status code 404 when a page is not found. See [Custom Error Pages](https://flask.palletsprojects.com/en/2.2.x/errorhandling/) for further information. 
@@ -103,7 +109,14 @@ These functions are:
 15. **get_categories()** - 
 
 16. **add_category()** - 
-    
+
+
+#### Colour Scheme
+
+The following Materialize [colour scheme](https://materializecss.com/color.html) was chosen for simplicity and readability.
+
+<h2 align="left"><img src="docs/pictures/colours.png"></h2>
+
 
 ### Wireframes
 

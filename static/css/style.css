@@ -23,6 +23,11 @@
     margin-left: 0;
 }
 
+.card-image img {
+    height: 250px;
+    object-fit: cover;
+}
+
 /*------------------------------------ about page */
 .ul-about {
     list-style-type: square;
