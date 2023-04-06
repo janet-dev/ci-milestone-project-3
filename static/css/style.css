@@ -37,13 +37,13 @@
     list-style-type: none;
 }
 
-/*------------------------------------ 404 page */
-.display-404 {
+/*--------------------------- 404/500 error pages */
+.display-error {
     font-size: 48px;
     color: #004d40;
 }
   
-.lead-404 {
+.lead-error {
     font-weight: 400;
     color: #004d40;
 }
@@ -51,7 +51,7 @@
 .hero-container {
     height: 100vh;
     width: 100%;
-    background: url("/static/img/page-404.jpg") no-repeat bottom right fixed;
+    background: url("/static/img/page-error.jpg") no-repeat bottom right fixed;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@
     font-size: larger;
 }
 
-#a-404 {
+#a-error {
     text-decoration-line: underline;
     color: #01579b;
 }
