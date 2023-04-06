@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font-awesome 5.13.1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" 
+            integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
+        <!-- Compiled and minified Materialize CSS 1.0.0 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+        <!-- Custom CSS -->
+        {% block styles %}
+        {% endblock %}
+
+        <title>Internal Server Error</title>
+        <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    </head>
+    <body>
+        <div class="hero-container">
+            <section>
+                <h1 class="center-align display-404">500</h1>
+                <h2 class="center-align lead-404">Internal Server Error</h2>
+                <h3>Take a coffee break or</h3>
+                <h3 class="center-align lead-404">
+                    <a id="a-404" href="{{ url_for('get_plants') }}">go back Home!</a>
+                </h3>
+            </section>
+        </div>
+    </body>
+</html>

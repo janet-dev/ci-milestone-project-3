@@ -44,11 +44,25 @@ def page_not_found(error_404):
     for the status code 404 for page not found. Further info from:
     https://flask.palletsprojects.com/en/2.2.x/errorhandling/
 
-    :param error_404:   error raised
+    :param error_404:   page not found error raised
     :return:    rendered template for the 404 page,
                 if an explicit error of 404 is raised
     '''
     return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(error_500):
+    '''
+    An error handler is registered with the errorhandler() decorator
+    for the status code 500 internal server error. Further info from:
+    https://flask.palletsprojects.com/en/2.2.x/errorhandling/
+
+    :param error_500:   Internal Server Error raised
+    :return:    rendered template for the 500 page,
+                if an explicit error of 500 is raised
+    '''
+    return render_template('500.html'), 500
 
 
 @app.route("/")
@@ -367,4 +381,4 @@ if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
-        debug=True)
+        debug=False)
