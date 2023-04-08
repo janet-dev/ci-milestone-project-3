@@ -9,7 +9,7 @@ Source:     https://flask.palletsprojects.com/en/2.2.x/
 """
 
 from functools import wraps
-from flask import (flash, redirect, session, url_for)
+from flask import (Flask, flash, redirect, render_template, session, url_for)
 
 
 def login_required_admin(func):
@@ -37,8 +37,10 @@ def login_required_admin(func):
         :return:    wrapped function with its args/kwargs if 'admin' logged in,
                     or login route
         '''
-        if session["user"] == "admin":
-            return func(*args, **kwargs)
+        if "user" in session:
+            if session["user"] == "admin":
+                return func(*args, **kwargs)
+            return render_template("404.html"), 404
         flash("Access Denied")
         return redirect(url_for('login'))
 
@@ -65,9 +67,10 @@ def login_required_user(func):
         :return:    wrapped function with its args/kwargs if 'user' logged in,
                     or login route
         '''
+
         if "user" in session:
             return func(*args, **kwargs)
-        flash("You need to login")
+        flash("Access Denied")
         return redirect(url_for('login'))
 
     return decorated_function

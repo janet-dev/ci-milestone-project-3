@@ -288,8 +288,7 @@ def edit_plant(plant_id):
 
     # Code from CI video DBMS Masterclass 2
     if "user" not in session or session["user"] != plant["created_by"]:
-        flash("You can only edit your own tasks!")
-        return redirect(url_for("get_plants"))
+        return render_template('404.html')
 
     if request.method == "POST":
         is_edible = "on" if request.form.get("is_edible") else "off"
@@ -334,8 +333,7 @@ def delete_plant(plant_id):
 
     # Code from CI video DBMS Masterclass 2
     if "user" not in session or session["user"] != plant["created_by"]:
-        flash("You can only delete your own tasks!")
-        return redirect(url_for("get_plants"))
+        return render_template('404.html')
 
     if request.method == "POST":
         mongo.db.plants.delete_one({"_id": ObjectId(plant_id)})
