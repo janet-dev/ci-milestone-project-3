@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="teal-text text-darken-4 center-align">Delete Plant</h3><br>
+
+    <div class="row card-panel grey lighten-5">
+        <h4 class="teal-text text-darken-4 center-align">{{ plant.plant_name }}</h4><br>
+        <form class="col s12" method="POST" action="{{ url_for('delete_plant', plant_id=plant._id) }}">
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align"><br>
+                    <a href="{{ url_for('get_plants') }}" class="btn-large teal darken-4 text-shadow">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
+                    <button type="submit" class="btn-large red darken-4 text-shadow">
+                        Delete <i class="fas fa-trash-alt right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

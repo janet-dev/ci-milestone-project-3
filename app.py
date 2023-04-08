@@ -284,7 +284,7 @@ def edit_plant(plant_id):
 
     :return:    home page route
     '''
-    plant = plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
+    plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
 
     # Code from CI video DBMS Masterclass 2
     if "user" not in session or session["user"] != plant["created_by"]:
@@ -322,7 +322,7 @@ def edit_plant(plant_id):
         animals=animals)
 
 
-@app.route("/delete_plant/<plant_id>")
+@app.route("/delete_plant/<plant_id>", methods=["GET", "POST"])
 def delete_plant(plant_id):
     '''
     This function enables the user to delete their own plants,
@@ -330,16 +330,19 @@ def delete_plant(plant_id):
 
     :return:    home page route
     '''
-    plant = plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
+    plant = mongo.db.plants.find_one({"_id": ObjectId(plant_id)})
 
     # Code from CI video DBMS Masterclass 2
     if "user" not in session or session["user"] != plant["created_by"]:
         flash("You can only delete your own tasks!")
         return redirect(url_for("get_plants"))
 
-    mongo.db.plants.delete_one({"_id": ObjectId(plant_id)})
-    flash("Plant Successively Deleted")
-    return redirect(url_for("get_plants"))
+    if request.method == "POST":
+        mongo.db.plants.delete_one({"_id": ObjectId(plant_id)})
+        flash("Plant Successively Deleted")
+        return redirect(url_for("get_plants"))
+
+    return render_template("delete_plant.html", plant=plant)
 
 
 @app.route("/get_categories")
