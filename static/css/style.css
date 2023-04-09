@@ -64,3 +64,15 @@
     text-decoration-line: underline;
     color: #01579b;
 }
+
+/*------------------------------------- media queries */
+
+/* Code from George Kagan and FdM
+/* https://stackoverflow.com/questions/39894291/how-to-change-text-not-font-size-according-to-screen-size-in-css
+/* Hide short text by default (resolution > 1200px) */
+.short-text { display: none; }
+/* When resolution <= 500px, hide full text and show short text */
+@media (max-width: 500px) {
+    .short-text { display: inline-block; }
+    .full-text { display: none; }
+}

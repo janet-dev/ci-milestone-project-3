@@ -213,7 +213,7 @@ def profile(username):
         return render_template(
             "profile.html", username=username, plants=plants)
 
-    return redirect(url_for("login"))
+    return render_template("404.html")
 
 
 @app.route("/logout")
