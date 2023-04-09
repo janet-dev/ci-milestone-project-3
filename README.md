@@ -75,40 +75,6 @@ Flask uses the route() decorator to bind a function to a URL. For example:
 def index():
     return 'Index Page'
 ```
-These functions used in this app are:
-
-1. **page_not_found(error_404)** - An error handler is registered with the Flask errorhandler() decorator
-    for the status code 404 when a page is not found. See [Custom Error Pages](https://flask.palletsprojects.com/en/2.2.x/errorhandling/) for further information. 
-
-2. **login_required_admin(func)** - 
-
-3. **login_required_user(func)** -
-
-4. **get_plants()** - 
-
-5. **about()** - 
-
-6. **search()** - 
-
-7. **search_profile()** - 
-
-8. **register()** - 
-
-9. **login()** - 
-
-10. **profile(username)** - 
-
-11. **logout()** - 
-
-12. **add_plant()** - 
-
-13. **edit_plant(plant_id)** - 
-
-14. **delete_plant(plant_id)** - 
-
-15. **get_categories()** - 
-
-16. **add_category()** - 
 
 #### Colour Scheme
 
@@ -260,6 +226,8 @@ Plant images from [Dean Lewis](https://unsplash.com/@infinitecreations21) on Uns
 Cucumber plant image from [Kelly Neil](https://unsplash.com/@baconandbaileys) on Unsplash
 
 Forget-me-not image from [Noah Boyer](https://unsplash.com/@emerald_) on Unsplash
+
+Barley field image from [Kai Pilger](https://unsplash.com/@kaip) on Unsplash
 
 Pineapple wearing sunglasses from [Heather Ford](https://unsplash.com/@the_modern_life_mrs) on Unsplash
 
