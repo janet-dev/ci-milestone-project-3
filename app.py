@@ -368,8 +368,15 @@ def add_category():
     :return:    rendered categories page for admin user only
     '''
     if request.method == "POST":
+        existing_category = mongo.db.categories.find_one(
+            {"category_name": request.form.get("category_name").lower()})
+
+        if existing_category:
+            flash("Category Already Exists")
+            return redirect(url_for("get_categories"))
+
         category = {
-            "category_name": request.form.get("category_name")
+            "category_name": request.form.get("category_name").lower()
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
