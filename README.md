@@ -78,13 +78,22 @@ def index():
 
 #### Colour Scheme
 
-The following Materialize [colour scheme](https://materializecss.com/color.html) was chosen for simplicity and readability.
+The following Materialize [colour scheme](https://materializecss.com/color.html) was chosen for simplicity,  readability and lends itself nicely to the subject of gardening.
 
 <h2 align="left"><img src="docs/pictures/colours.png"></h2>
 
 #### Typography
 
-Roboto is the standard font used by Materialize.
+[Roboto font](https://fonts.google.com/specimen/Roboto) is the standard font used by Materialize, which is used for good readability and contrast when required. It is considered both [friendly and professional](https://xd.adobe.com/ideas/principles/web-design/best-modern-fonts-for-websites/), so should suit most sites and devices.
+
+#### Imagery
+
+- In general, all pages have the Materialize white background with dark teal or black text. This ties into the subject matter whilst matching the default shade of teal for Materialize toggle switches and dropdown selectors
+- The Home and Profile pages feature the standard Materialize [Card Reveal](https://materializecss.com/cards.html) displayed in a grid style of up to three columns across the page. Each card has a image with minimum content, but when clicked, further information is revealed. At the top of the page is a search panel for finding plants via keywords or phrases with Reset and Search buttons.
+- The About page contains only text and icons in a Materialize [Card Panel](https://materializecss.com/cards.html)
+- The Add/Edit/Delete pages include a mixture of text, text inputs, toggle switches and dropdown selectors with Cancel and Add/Update/Delete buttons in a Card Panel.
+- The Register and Log In pages also contain text inputs only with Log In/Register buttons within a Card Panel.
+- The Categories page features the [Basic Card](https://materializecss.com/cards.html) displayed in a grid style of up to four columns across the page.
 
 ### Wireframes
 
@@ -120,11 +129,24 @@ Tables (Collections)
 
 ## Features
 
+* This app consists of nine user pages for:
+    - Home, About, Log In, Register, Profile, Add Plant, Edit Plant, Delete Plant, Log Out
+* Plus two additional administrator pages for:
+    - Categories and Add Category
+* And a further two pages for:
+    - 404 page not found and 500 internal server errors
+ 
+
 ### Navigation
 
 ### Home Page
 
+Features everyone's plant cards and a search panel.
+
 ### About
+
+Outlines the reason for the app and it's instructions of use.
+
 
 ### Log In
 
