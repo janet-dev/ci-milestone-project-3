@@ -250,7 +250,7 @@ def add_plant():
 
         plant = {
             "category_name": request.form.get("category_name"),
-            "plant_name": request.form.get("plant_name"),
+            "plant_name": request.form.get("plant_name").lower(),
             "plant_description": request.form.get("plant_description"),
             "sow": request.form.get("sow"),
             "is_done": is_done,
@@ -295,7 +295,7 @@ def edit_plant(plant_id):
         is_done = "on" if request.form.get("is_done") else "off"
         submit = {
             "category_name": request.form.get("category_name"),
-            "plant_name": request.form.get("plant_name"),
+            "plant_name": request.form.get("plant_name").lower(),
             "plant_description": request.form.get("plant_description"),
             "sow": request.form.get("sow"),
             "is_edible": is_edible,

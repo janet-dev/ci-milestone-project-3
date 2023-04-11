@@ -32,12 +32,12 @@
                             </div>
                             <div class="card-content">
                                 <span class="card-title activator teal-text text-darken-4">
-                                    <strong>{{ plant.plant_name }}</strong>
+                                    <strong>{{ plant.plant_name|title }}</strong>
                                     {% if plant.is_edible == "on" %}
                                         <i class="fas fa-utensils teal-text text-darken-4 tooltipped"
                                             data-position="right" data-tooltip="EDIBLE"></i>
                                     {% endif %}
-                                    <br>Sow: {{ plant.sow }}
+                                    <br>Sow: {{ plant.sow|title }}
                                     {% if plant.is_done == "on" %}
                                     <i class="fas fa-check-square amber-text text-darken-4 tooltipped"
                                         data-position="right" data-tooltip="DONE"></i>
@@ -48,16 +48,16 @@
                             </div>
                             <div class="card-reveal">
                                 <span class="card-title teal-text text-darken-4">
-                                    <strong>{{ plant.plant_name }}</strong>
-                                    <br>Sow: {{ plant.sow }}
+                                    <strong>{{ plant.plant_name|title }}</strong>
+                                    <br>Sow: {{ plant.sow|title }}
                                     <i class="fas fa-times right"></i>
                                 </span>
                                 <p><strong>Description:</strong><br>
                                     {{ plant.plant_description }}
                                 </p>
                                 <ul>
-                                    <li><strong>Category: </strong>{{ plant.category_name }}</li>
-                                    <li><strong>Feed for: </strong>{{ plant.animal_name }}</li>
+                                    <li><strong>Category: </strong>{{ plant.category_name|title }}</li>
+                                    <li><strong>Feed for: </strong>{{ plant.animal_name|title }}</li>
                                 </ul>
                                 <div>
                                     <a href="{{ url_for('edit_plant', plant_id=plant._id) }}" class="btn-small teal darken-4">Edit</a>
