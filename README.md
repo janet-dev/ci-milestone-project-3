@@ -251,11 +251,10 @@ Forget-me-not image from [Noah Boyer](https://unsplash.com/@emerald_) on Unsplas
 
 Barley field image from [Kai Pilger](https://unsplash.com/@kaip) on Unsplash
 
-Default plant image (pineapple wearing sunglasses) from [Heather Ford](https://unsplash.com/@the_modern_life_mrs) on Unsplash
+Default/fallback plant image (pineapple wearing sunglasses) from [Heather Ford](https://unsplash.com/@the_modern_life_mrs) on Unsplash
 
 Wallpaper for 404/500 page from [Maxim Berg](https://unsplash.com/@maxberg) on Unsplash
 
-Backup photograph (bee on yellow flower) for broken image address url from [Dmitry Grigoriev](https://unsplash.com/@at8eqeq3) on Unsplash
 
 ### Code
 
