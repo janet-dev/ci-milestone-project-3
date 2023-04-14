@@ -53,7 +53,7 @@ As this is a brand new site with limited features, so the user stories were take
 * I would like to build a Flask app.
 * I would like to allow users to store their data via the app.
 * I would like to build a community gardening app to also assist pet owners.
-* I would like the app to be visually attractive and fun to use.
+* I would like the app to be visually attractive.
 
 ### Design
 
@@ -109,7 +109,7 @@ Database Entity Relationship Diagram
 
 <h2 align="left"><img src="docs/pictures/db-erd.jpg"></h2>
 
-Tables (Collections)
+Table (Collection) Samples
 
 * Plants
 <h2 align="left"><img src="docs/pictures/db-plants.jpg"></h2>
@@ -138,6 +138,11 @@ Tables (Collections)
  
 
 ### Navigation
+
+Navigation bar will be the default responsive Materialize one for all pages, except for the 404 and 500 error pages.
+* Desktops
+   - [the menu](docs/pictures/nav-desktop.jpg) items: LevelCoder branding, Home, Courses, About will be inline and fixed across the top of the screen. The current page will have white text, while others will be in grey.
+    - LevelCoder and Home will navigate to index.html, Courses to courses.html and About to about.html.
 
 ### Home Page
 
