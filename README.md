@@ -109,7 +109,7 @@ Database Entity Relationship Diagram
 
 <h2 align="left"><img src="docs/pictures/db-erd.jpg"></h2>
 
-Table (Collection) Samples
+Table (Collection) Examples
 
 * Plants
 <h2 align="left"><img src="docs/pictures/db-plants.jpg"></h2>
@@ -140,9 +140,24 @@ Table (Collection) Samples
 ### Navigation
 
 Navigation bar will be the default responsive Materialize one for all pages, except for the 404 and 500 error pages.
+
 * Desktops
-   - [the menu](docs/pictures/nav-desktop.jpg) items: Vazy Garden branding, Home, About, Profile, Add Plant, LogOut will be inline and fixed across the top of the screen. All pages will have white text on a teal banner and on hover, a dark teal backgound.
-    - Vazy Garden and Home will navigate to get_plants.html, Courses to courses.html and About to about.html.
+
+    <h2 align="left"><img src="docs/pictures/nav-desktop.jpg"></h2>
+
+   - the menu items: Vazy Garden branding, Home, About, Profile, Add Plant, LogOut will be inline and fixed across the top of the screen. All pages will have white text on a teal banner and on hover, a dark teal backgound.
+    - Vazy Garden and Home will navigate to route /get_plants and render plants.html
+    - About to /about and render about.html
+    - Profile to /profile/(username) and render profile.html
+    - Add Plant to /add_plant and render add_plant.html
+    - Add Category (administrator user only) to /get_categories
+    - Log Out to /login and render login.html
+
+* Mobiles 
+
+    <h2 align="left"><img src="docs/pictures/nav-mobile.jpg"></h2>
+
+    - will feature the collapsed navigation with a hamburger icon, which when selected, will reveal a sidenav slide out menu with black text on a white background. On hover, the text background will change from white to light grey
 
 ### Home Page
 
