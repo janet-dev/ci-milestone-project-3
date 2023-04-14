@@ -141,8 +141,8 @@ Table (Collection) Samples
 
 Navigation bar will be the default responsive Materialize one for all pages, except for the 404 and 500 error pages.
 * Desktops
-   - [the menu](docs/pictures/nav-desktop.jpg) items: LevelCoder branding, Home, Courses, About will be inline and fixed across the top of the screen. The current page will have white text, while others will be in grey.
-    - LevelCoder and Home will navigate to index.html, Courses to courses.html and About to about.html.
+   - [the menu](docs/pictures/nav-desktop.jpg) items: Vazy Garden branding, Home, About, Profile, Add Plant, LogOut will be inline and fixed across the top of the screen. All pages will have white text on a teal banner and on hover, a dark teal backgound.
+    - Vazy Garden and Home will navigate to get_plants.html, Courses to courses.html and About to about.html.
 
 ### Home Page
 
