@@ -252,7 +252,7 @@ def add_plant():
             "category_name": request.form.get("category_name"),
             "plant_name": request.form.get("plant_name").lower(),
             "plant_description": request.form.get("plant_description"),
-            "sow": request.form.get("sow"),
+            "sow": request.form.get("sow").lower(),
             "is_done": is_done,
             "is_edible": is_edible,
             "animal_name": request.form.get("animal_name"),
@@ -265,14 +265,15 @@ def add_plant():
         return redirect(url_for("get_plants"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    months = mongo.db.months.find()
+    # months = mongo.db.months.find()
     animals = mongo.db.animals.find().sort("animal_name", 1)
 
     return render_template(
         "add_plant.html",
         categories=categories,
-        months=months,
         animals=animals)
+        # months=months,
+
 
 
 @app.route("/edit_plant/<plant_id>", methods=["GET", "POST"])

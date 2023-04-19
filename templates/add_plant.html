@@ -50,17 +50,13 @@
                     <label for="plant_description">Plant Description</label>
                 </div>
             </div>
-            <!-- month dropdown for sowing -->
+            <!-- month for sowing -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
-                    <select id="sow" name="sow" class="validate" required>
-                        <option value="" disabled selected>Choose Month</option>
-                        {% for month in months %}
-                            <option value="{{ month.sow }}">{{ month.sow }}</option>
-                        {% endfor %}
-                    </select>
-                    <label for="sow">Sow in</label>
+                    <input id="sow" name="sow" minlength="3" maxlength="3" pattern="^[a-zA-Z]{3,3}$" type="text" placeholder="mmm" class="validate"
+                        required>
+                    <label for="sow">Sow in Month</label>
                 </div>
             </div>
             <!-- is_edible toggle -->
