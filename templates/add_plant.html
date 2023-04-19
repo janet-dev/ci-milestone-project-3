@@ -24,12 +24,12 @@
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix teal-text text-darken-4"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
+                        <option value="MISC" selected>MISC</option>
                         {% for category in categories %}
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="category_name">Plant Category</label>
+                    <label for="category_name">Change Plant Category</label>
                 </div>
             </div>
             <!-- plant name -->
@@ -54,9 +54,13 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
-                    <input id="sow" name="sow" minlength="3" maxlength="3" pattern="^[a-zA-Z]{3,3}$" 
-                        type="text" placeholder="Feb (a-zA-Z)" class="validate" required>
-                    <label for="sow">Sow in Month</label>
+                    <select id="sow" name="sow" class="validate" required>
+                        <option value="january" selected>january</option>
+                        {% for month in months %}
+                            <option value="{{ month.sow }}">{{ month.sow }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="sow">Change Sow Month</label>
                 </div>
             </div>
             <!-- is_edible toggle -->
@@ -77,9 +81,13 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-paw prefix teal-text text-darken-4"></i>
-                    <input id="animal_name" name="animal_name" minlength="3" maxlength="15" pattern="^[a-zA-Z]{3,15}$" 
-                        type="text" placeholder="Tortoise (a-zA-Z)" class="validate" required>
-                    <label for="animal_name">Feed for</label>
+                    <select id="animal_name" name="animal_name" class="validate" required>
+                        <option value="N/A" selected>N/A</option>
+                        {% for animal in animals %}
+                            <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="animal_name">Change Animal to Feed</label>
                 </div>
             </div>
             <!-- plant photo link -->

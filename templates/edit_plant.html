@@ -28,7 +28,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix teal-text text-darken-4"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled>Choose Category</option>
+                        <option value="" disabled>Change Category</option>
                         {% for category in categories %}
                             {% if category.category_name == plant.category_name %}
                                 <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
@@ -65,7 +65,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
                     <select id="sow" name="sow" class="validate" required>
-                        <option value="" disabled selected>Choose Month</option>
+                        <option value="" disabled selected>Change Month</option>
                         {% for month in months %}
                             {% if month.sow == plant.sow %}
                                 <option value="{{ month.sow }}" selected>{{ month.sow }}</option>
@@ -100,7 +100,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-paw prefix teal-text text-darken-4"></i>
                     <select id="animal_name" name="animal_name" class="validate" required>
-                        <option value="" disabled selected>Choose Animal</option>
+                        <option value="" disabled selected>Change Animal</option>
                         {% for animal in animals %}
                             {% if animal.animal_name == plant.animal_name %}
                                 <option value="{{ animal.animal_name }}" selected>{{ animal.animal_name }}</option>
