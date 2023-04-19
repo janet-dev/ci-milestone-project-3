@@ -255,7 +255,7 @@ def add_plant():
             "sow": request.form.get("sow").lower(),
             "is_done": is_done,
             "is_edible": is_edible,
-            "animal_name": request.form.get("animal_name"),
+            "animal_name": request.form.get("animal_name").lower(),
             "link": request.form.get("link"),
             "seed_link": request.form.get("seed_link"),
             "created_by": session["user"]
@@ -266,14 +266,11 @@ def add_plant():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     # months = mongo.db.months.find()
-    animals = mongo.db.animals.find().sort("animal_name", 1)
+    # animals = mongo.db.animals.find().sort("animal_name", 1)
 
-    return render_template(
-        "add_plant.html",
-        categories=categories,
-        animals=animals)
-        # months=months,
-
+    return render_template("add_plant.html", categories=categories)
+    # animals=animals
+    # months=months,
 
 
 @app.route("/edit_plant/<plant_id>", methods=["GET", "POST"])

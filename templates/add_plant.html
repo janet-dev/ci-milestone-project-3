@@ -54,8 +54,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
-                    <input id="sow" name="sow" minlength="3" maxlength="3" pattern="^[a-zA-Z]{3,3}$" type="text" placeholder="mmm" class="validate"
-                        required>
+                    <input id="sow" name="sow" minlength="3" maxlength="3" pattern="^[a-zA-Z]{3,3}$" 
+                        type="text" placeholder="Feb (a-zA-Z)" class="validate" required>
                     <label for="sow">Sow in Month</label>
                 </div>
             </div>
@@ -73,16 +73,12 @@
                     </div>
                 </div>
             </div>
-            <!-- dropdown for animals -->
+            <!-- animal -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-paw prefix teal-text text-darken-4"></i>
-                    <select id="animal_name" name="animal_name" class="validate" required>
-                        <option value="" disabled selected>Choose Animal</option>
-                        {% for animal in animals %}
-                            <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
-                        {% endfor %}
-                    </select>
+                    <input id="animal_name" name="animal_name" minlength="3" maxlength="15" pattern="^[a-zA-Z]{3,15}$" 
+                        type="text" placeholder="Tortoise (a-zA-Z)" class="validate" required>
                     <label for="animal_name">Feed for</label>
                 </div>
             </div>
