@@ -6,6 +6,8 @@ $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $(".tooltipped").tooltip();
     $("select").formSelect();
+    $("select").formSelect();
+    $("select").formSelect();
 
     /* Code from Tim Nelson (CI) for adding custom validation to Materialize dropdown */
     validateMaterializeSelect();
