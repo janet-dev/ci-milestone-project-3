@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix teal-text text-darken-4"></i>
-                    <select id="category_name" name="category_name" class="validate" required>
+                    <select id="category_name" name="category_name" class="validate">
                         <option value="MISC" selected>MISC</option>
                         {% for category in categories %}
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
@@ -54,7 +54,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
-                    <select id="sow" name="sow" class="validate" required>
+                    <select id="sow" name="sow" class="validate">
                         <option value="january" selected>january</option>
                         {% for month in months %}
                             <option value="{{ month.sow }}">{{ month.sow }}</option>
@@ -81,7 +81,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-paw prefix teal-text text-darken-4"></i>
-                    <select id="animal_name" name="animal_name" class="validate" required>
+                    <select id="animal_name" name="animal_name" class="validate">
                         <option value="N/A" selected>N/A</option>
                         {% for animal in animals %}
                             <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
