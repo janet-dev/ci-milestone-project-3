@@ -29,7 +29,7 @@
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="category_name">Change Plant Category</label>
+                    <label for="category_name">Change Category</label>
                 </div>
             </div>
             <!-- plant name -->
@@ -38,7 +38,7 @@
                     <i class="fab fa-pagelines prefix teal-text text-darken-4"></i>
                     <input id="plant_name" name="plant_name" minlength="3" maxlength="50" type="text" class="validate"
                         required>
-                    <label for="plant_name">Plant Name</label>
+                    <label for="plant_name">Name</label>
                 </div>
             </div>
             <!-- plant description -->
@@ -47,7 +47,7 @@
                     <i class="fas fa-align-left prefix teal-text text-darken-4"></i>
                     <textarea id="plant_description" name="plant_description" minlength="5" maxlength="200"
                         class="materialize-textarea validate" required></textarea>
-                    <label for="plant_description">Plant Description</label>
+                    <label for="plant_description">Description</label>
                 </div>
             </div>
             <!-- month for sowing -->
@@ -72,7 +72,7 @@
                         <label for="is_edible">
                             <input type="checkbox" id="is_edible" name="is_edible">
                             <span class="lever"></span>
-                            Edible for Humans
+                            Edible
                         </label>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="link" name="link" minlength="5" maxlength="150" type="text" class="validate" required
                         value="https://images.unsplash.com/photo-1515878459526-bfff71cfa6da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
-                    <label for="link">Plant Image Address from <a href="https://unsplash.com/" target="_blank">Unsplash</a></label>
+                    <label for="link"><a href="https://unsplash.com/" target="_blank">Unsplash</a> Image</label>
                 </div>
             </div>
             <!-- seed catalogue link -->
@@ -105,7 +105,7 @@
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="seed_link" name="seed_link" minlength="5" maxlength="150" type="text" class="validate" required
                         value="https://www.suttons.co.uk/">
-                    <label for="seed_link">Buy Seeds from <a href="https://www.suttons.co.uk/" target="_blank">Suttons</a></label>
+                    <label for="seed_link">Buy <a href="https://www.suttons.co.uk/" target="_blank">Suttons</a> Seeds</label>
                 </div>
             </div>         
             <!-- submit button -->
