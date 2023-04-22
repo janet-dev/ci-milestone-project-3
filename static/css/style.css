@@ -37,6 +37,17 @@
     list-style-type: none;
 }
 
+/*------------------------------------ add/edit pages */
+label {
+    color:#004d40;
+}
+
+.links {
+    color:#004d40;
+    text-decoration: underline;
+    text-decoration-color: #004d40;
+}
+
 /*--------------------------- 404/500 error pages */
 .display-error {
     font-size: 48px;

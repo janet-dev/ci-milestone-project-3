@@ -3,7 +3,7 @@
 
     <h3 class="teal-text text-darken-4 center-align">Add Plant</h3>
 
-    <div class="row card-panel grey lighten-5">
+    <div class="row card-panel">
         <form class="col s12" method="POST" action="{{ url_for('add_plant') }}">
             <!-- is_done toggle -->
             <div class="row">
@@ -29,7 +29,7 @@
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="category_name">Change Category</label>
+                    <label for="category_name" class="teal-text text-darken-4">Change Category</label>
                 </div>
             </div>
             <!-- plant name -->
@@ -38,7 +38,7 @@
                     <i class="fab fa-pagelines prefix teal-text text-darken-4"></i>
                     <input id="plant_name" name="plant_name" minlength="3" maxlength="50" type="text" class="validate"
                         required>
-                    <label for="plant_name">Name</label>
+                    <label for="plant_name" class="teal-text text-darken-4">Name</label>
                 </div>
             </div>
             <!-- plant description -->
@@ -47,7 +47,7 @@
                     <i class="fas fa-align-left prefix teal-text text-darken-4"></i>
                     <textarea id="plant_description" name="plant_description" minlength="5" maxlength="200"
                         class="materialize-textarea validate" required></textarea>
-                    <label for="plant_description">Description</label>
+                    <label for="plant_description" class="teal-text text-darken-4">Description</label>
                 </div>
             </div>
             <!-- month for sowing -->
@@ -60,7 +60,7 @@
                             <option value="{{ month.sow }}">{{ month.sow }}</option>
                         {% endfor %}
                     </select>
-                    <label for="sow">Change Sow Month</label>
+                    <label for="sow" class="teal-text text-darken-4">Change Sow Month</label>
                 </div>
             </div>
             <!-- is_edible toggle -->
@@ -69,7 +69,7 @@
                     <!-- Switch -->
                     <div class="switch">
                         <i class="fas fa-utensils prefix teal-text text-darken-4"></i>
-                        <label for="is_edible">
+                        <label for="is_edible" class="teal-text text-darken-4">
                             <input type="checkbox" id="is_edible" name="is_edible">
                             <span class="lever"></span>
                             Edible
@@ -87,7 +87,7 @@
                             <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="animal_name">Change Animal to Feed</label>
+                    <label for="animal_name" class="teal-text text-darken-4">Change Animal to Feed</label>
                 </div>
             </div>
             <!-- plant photo link -->
@@ -96,7 +96,7 @@
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="link" name="link" minlength="5" maxlength="150" type="text" class="validate" required
                         value="https://images.unsplash.com/photo-1515878459526-bfff71cfa6da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
-                    <label for="link"><a href="https://unsplash.com/" target="_blank">Unsplash</a> Image</label>
+                    <label for="link" class="teal-text text-darken-4"><a href="https://unsplash.com/" target="_blank" class="links">Unsplash</a> Image</label>
                 </div>
             </div>
             <!-- seed catalogue link -->
@@ -105,7 +105,7 @@
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="seed_link" name="seed_link" minlength="5" maxlength="150" type="text" class="validate" required
                         value="https://www.suttons.co.uk/">
-                    <label for="seed_link">Buy <a href="https://www.suttons.co.uk/" target="_blank">Suttons</a> Seeds</label>
+                    <label for="seed_link" class="teal-text text-darken-4">Buy <a href="https://www.suttons.co.uk/" target="_blank" class="links">Suttons</a> Seeds</label>
                 </div>
             </div>         
             <!-- submit button -->
