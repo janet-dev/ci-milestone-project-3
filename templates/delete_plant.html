@@ -3,7 +3,7 @@
 
     <h3 class="teal-text text-darken-4 center-align">Delete Plant</h3><br>
 
-    <div class="row card-panel grey lighten-5">
+    <div class="row card-panel">
         <h4 class="teal-text text-darken-4 center-align">{{ plant.plant_name }}</h4><br>
         <form class="col s12" method="POST" action="{{ url_for('delete_plant', plant_id=plant._id) }}">
             <!-- submit button -->
