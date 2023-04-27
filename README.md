@@ -298,7 +298,7 @@ Outlines the reason for the app and it's instructions of use.
 * CSS validation from [Jigsaw (W3C)](https://jigsaw.w3.org/css-validator/).
 * Python validation from [CI Python Linter](https://pep8ci.herokuapp.com/).
 * jQuery validation from [JSHint](https://jshint.com/).
-* Web page quality improvements assisted by [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
+* Web page quality improvements assisted by [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) and [WebPageTest](https://www.webpagetest.org/).
 
 ---
 

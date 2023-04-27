@@ -75,3 +75,59 @@ Materialize v1.0.0 was used for building the site - see the [supported browsers]
 
     <h2 align="left"><img src="docs/testing/validation/ci-pylinter-decorators.jpg"></h2>
 
+
+### Site Audit
+
+Desktop audits by
+
+* Lighthouse:
+    - [get_plants.html report](docs/testing/audit/lighthouse-get-plants-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-get-plants-desktop.jpg"></h2>
+
+    - [about.html report](docs/testing/audit/lighthouse-about-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-about-desktop.jpg"></h2>
+
+    - [profile.html report](docs/testing/audit/lighthouse-profile-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-profile-desktop.jpg"></h2>
+    
+    - [add_plant.html report](docs/testing/audit/lighthouse-add-plant-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-add-plant-desktop.jpg"></h2>
+
+    - [edit_plant.html report](docs/testing/audit/lighthouse-edit-plant-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-edit-plant-desktop.jpg"></h2>
+
+    - [delete_plant.html report](docs/testing/audit/lighthouse-delete-plant-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-delete-plant-desktop.jpg"></h2>
+
+    - [categories.html report](docs/testing/audit/lighthouse-get-categories-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-get-categories-desktop.jpg"></h2>
+    
+    - [add_category.html report](docs/testing/audit/lighthouse-add-category-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-add-category-desktop.jpg"></h2>
+
+    - [register.html report](docs/testing/audit/lighthouse-register-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-register-desktop.jpg"></h2>
+
+    - [login.html report](docs/testing/audit/lighthouse-login-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-login-desktop.jpg"></h2>
+
+    - 404.html report - Lighthouse was unable to generate, so used WebPageTest instead
+        - See the article [Why you should be testing your 404 pages web performance](https://nooshu.com/blog/2020/08/25/you-should-be-testing-your-404-pages-web-performance/) by Matt Hobbs on Nooshu.com
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-404-desktop.jpg"></h2>
+
+* [WebPageTest](https://www.webpagetest.org/):
+
+    - [404.html report](docs/testing/audit/webpagetest-404-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/webpagetest-404-desktop.jpg"></h2>
