@@ -85,7 +85,7 @@ def about():
 
     :return:    Rendered about page
     '''
-    return
+    return # Test 500 error
     # return render_template("about.html")
 
 
