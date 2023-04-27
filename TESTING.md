@@ -131,3 +131,7 @@ Desktop audits by
     - [404.html report](docs/testing/audit/webpagetest-404-desktop.pdf)
 
     <h2 align="left"><img src="docs/testing/audit/webpagetest-404-desktop.jpg"></h2>
+
+    - [500.html report](docs/testing/audit/webpagetest-500-desktop.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/webpagetest-500-desktop.jpg"></h2>
