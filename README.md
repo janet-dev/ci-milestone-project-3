@@ -8,7 +8,7 @@ This project has been created in order to provide a community CRUD application o
 The information has been presented in a way that ensures the users achieve their goals of:
 * understanding what the site's function is
 * understanding how to create, read, update and delete their own records or posts
-* being able to eregister, log in and log out of this community site
+* being able to register, log in and log out of this community site
 
 The site also enhances the owner's goals by:
 * showcasing their database design skills
@@ -24,8 +24,9 @@ The site also enhances the owner's goals by:
 * This README.md file explains what the project does and the value it provides for the users
 * Version control is provided by Git and GitHub
 * External code, libraries, templates, images, information, etc. will be listed in the **Credits**, at the bottom of this README.
-* This project is deployed via **Heroku**. The code stored in a GitHub repository, whilst the data is stored in **MongoDB Atlas**.
+* This project is deployed via **Heroku**. The code stored in a GitHub repository, whilst the data is stored in the non-relational database, **MongoDB Atlas**.
 
+---
 
 <h1 align="left">Flask App with MongoDB: Vazy Garden</h1>
 
@@ -37,23 +38,82 @@ The site is designed to be responsive and accessible on a range of devices, maki
 
 <h2 align="left"><img src="https://images.unsplash.com/photo-1619029403797-7388c3f322a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"></h2>
 
+---
 
-## User Experience (UX)
+## Table of Contents
+1. [**UX**](#ux)
+    - [**User Stories**](#user-stories)
+    - [**Owner Goals**](#owner-goals)
+    - [**Design**](#design)
+        - [**The CRUD App**](#the-crud-app)
+        - [**Framework**](#framework)
+        - [**Colour Scheme**](#colour-scheme)
+        - [**Typography**](#typography)
+        - [**Imagery**](#imagery)
+    - [**Wireframes**](#wireframes)
+    - [**Non-Relational Database**](#non-relational-database)
+
+2. [**Features**](#features)
+    - [**Current Features**](#current-features)
+        - [**Navigation**](#navigation)
+        - [**Home Page**](#home-page)
+        - [**About**](#about)
+        - [**Log In**](#log-in)
+        - [**Register**](#register)
+        - [**Profile**](#profile)
+        - [**Add Plant**](#add-plant)
+        - [**Add Category**](#add-category)
+        - [**Log Out**](#log-out)
+        - [**404 Page**](#404-page)
+    - [**Future Features**](#future-features)
+
+4. [**Technologies Used**](#technologies-used)
+    - [**Design Tools**](#design-tools)
+    - [**Front-End**](#front-end)
+    - [**Back-End**](#back-end)
+    - [**Validation and Evaluation**](#validation-and-evaluation)
+
+5. [**Project Testing**](TESTING.md)
+    - [**Manual Testing**](TESTING.md/#manual-testing)
+    - [**Supported Browsers and Screen Sizes**](TESTING.md/#supported-browsers-and-screen-sizes)
+    - [**Code Validation**](TESTING.md/#code-validation)
+    - [**Site Audit**](TESTING.md/#site-audit)
+    - [**Compatibility**](TESTING.md/#compatibility)
+    - [**Known Issues**]TESTING.md/(#known-issues)
+
+6. [**Deployment**](DEPLOYMENT.md)
+    - [**Local Deployment**](DEPLOYMENT.md/#local-deployment)
+    - [**Remote Deployment**](DEPLOYMENT.md/#remote-deployment)
+
+7. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Code**](#code)
+    - [**Acknowledgements**](#acknowledgements)
+
+---
+
+## UX
 
 ### User stories
 
-As this is a brand new site with limited features, so the user stories were taken from the perspective of the visiting or anonymous user. We don't have any traffic data yet and we don't really know who are users are at this point.
-* As a visiting user, I would like to create, read, update and delete my own plant records.
-* As a visiting user, I would like to easily understand how to use the site.
-* As a visiting user, I would like to keep my information secure.
-* As a visiting user, I would like to see other users' records.
+:white_check_mark: *denotes current features*
+
+"**_As a user, I would like to_** _____________________________"
+
+- :white_check_mark: *create, read, update and delete my own plant records*.
+- :white_check_mark: *easily understand how to use the site*.
+- :white_check_mark: *keep my information secure*.
+- :white_check_mark: *view the site without logging in*.
 
 ### Owner goals
 
-* I would like to build a Flask app.
-* I would like to allow users to store their data via the app.
-* I would like to build a community gardening app to also assist pet owners.
-* I would like the app to be visually attractive.
+"**_As an owner, I would like to_** _____________________________"
+
+- :white_check_mark: *build a Flask app*.
+- :white_check_mark: *allow users to store their data via the app*.
+- :white_check_mark: *build a community gardening app to also assist pet owners*.
+- :white_check_mark: *build an app to be visually attractive*.
 
 ### Design
 
@@ -75,6 +135,12 @@ Flask uses the route() decorator to bind a function to a URL. For example:
 def index():
     return 'Index Page'
 ```
+
+#### Framework
+
+- [Materialize 1.0.0](https://materializecss.com/) is a modern and clean layout of Materialize as a front-end framework, with simple documentation.
+- [jQuery 3.5.1](https://code.jquery.com/jquery/) was used for minimal JavaScript programming.
+- [Flask 2.2.3](https://flask.palletsprojects.com/en/2.2.x/) is a microframework used to render the back-end Python with the front-end Materialize.
 
 #### Colour Scheme
 
@@ -103,9 +169,9 @@ Tablet [wireframes](docs/ux/wireframe-mp3.pdf)
 
 Desktop
 
-### Non-Relational Database - MongoDB
+### Non-Relational Database
 
-Database Entity Relationship Diagram
+Database Entity Relationship Diagram (MongoDB)
 
 <h2 align="left"><img src="docs/pictures/db-erd.jpg"></h2>
 
@@ -126,8 +192,11 @@ Table (Collection) Examples
 * Users
 <h2 align="left"><img src="docs/pictures/db-users.jpg"></h2>
 
+---
 
 ## Features
+
+### Current Features
 
 * This app consists of nine user pages for:
     - Home, About, Log In, Register, Profile, Add Plant, Edit Plant, Delete Plant, Log Out
@@ -137,7 +206,7 @@ Table (Collection) Examples
     - 404 page not found and 500 internal server errors
  
 
-### Navigation
+#### Navigation
 
 Navigation bar will be the default responsive Materialize one for all pages, except for the 404 and 500 error pages.
 
@@ -159,47 +228,44 @@ Navigation bar will be the default responsive Materialize one for all pages, exc
 
     - will feature the collapsed navigation with a hamburger icon, which when selected, will reveal a sidenav slide out menu with black text on a white background. On hover, the text background will change from white to light grey
 
-### Home Page
+#### Home Page
 
 Features everyone's plant cards and a search panel.
 
-### About
+#### About
 
 Outlines the reason for the app and it's instructions of use.
 
 
-### Log In
+#### Log In
 
-### Register
+#### Register
 
-### Profile
+#### Profile
 
-### Add Plant
+#### Add Plant
 
-### Add Category
+#### Add Category
 
-### Log Out
+#### Log Out
 
-### 404 Page
-
-
-## Future Features
+#### 404 Page
 
 
-## Technology Used
+### Future Features
 
-* [HTML5](https://en.wikipedia.org/wiki/HTML5) and [CSS3](https://en.wikipedia.org/wiki/CSS) for building and custom styling the site.
-* [JavaScript](https://www.w3schools.com/js/js_history.asp) which is used to make the web pages interactive.
-* [Python](https://www.python.org/) is a high-level, general-purpose programming language.
-* [Flask](https://flask.palletsprojects.com/en/2.2.x/) is a micro web framework written in Python.
-* [Materialize CSS](https://materializecss.com/) is a modern responsive CSS framework based on Material Design by Google.
-* [MongoDB Atlas](https://www.mongodb.com/atlas) is a source-available cross-platform document-oriented database program.
-* Wireframes from [Balsamiq](https://balsamiq.com/).
+---
+
+## Technologies Used
+
 * Developer platform from [Gitpod](https://www.gitpod.io/).
 * IDE integrated into Gitpod from [Visual Studio Code](https://code.visualstudio.com/).
 * Debugging assisted by [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/).
 * Version control integrated into Gitpod from [Git](https://git-scm.com/).
-* Project deployment provided by [Heroku](https://www.heroku.com/home).
+
+### Design Tools
+
+* Wireframes from [Balsamiq](https://balsamiq.com/).
 * Roboto font from [Materialize](https://fonts.google.com/specimen/Roboto).
 * Colour palette generated by [Materialize](https://materializecss.com/color.html).
 * Icon library and toolkit from [Font Awesome 5](https://fontawesome.com/).
@@ -211,17 +277,36 @@ Outlines the reason for the app and it's instructions of use.
 * PDF Reader from [Adobe Acrobat Reader](https://www.adobe.com/uk/)
 * Flowchart by [diagrams.net/draw.io](https://www.diagrams.net/)
 * MongoDB ERD created by [DbSchema](https://dbschema.com/)
+
+### Front-End
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) as the base for markup text.
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) for custom styling the site.
+* [jQuery](https://jquery.com/) for JavaScript functionality.
+* [Materialize CSS](https://materializecss.com/) is a modern responsive CSS framework based on Material Design by Google.
+
+### Back-End
+* [Python](https://www.python.org/) is a high-level, general-purpose programming language.
+* [MongoDB Atlas](https://www.mongodb.com/atlas) is a source-available cross-platform document-oriented database program.
+* [Flask](https://flask.palletsprojects.com/en/2.2.x/) is a micro web framework written in Python.
+* [Jinja 2](https://palletsprojects.com/p/jinja/) for templating with Flask.
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.2.x/) for password hashing, authentication and authorisation.
+* Project deployment provided by [Heroku](https://www.heroku.com/home).
+
+### Validation and Evaluation
+
 * HTML validation from [W3C](https://validator.w3.org/#validate_by_input).
 * CSS validation from [Jigsaw (W3C)](https://jigsaw.w3.org/css-validator/).
-* Python validation from [Pylint](https://pypi.org/project/pylint/)
+* Python validation from [CI Python Linter](https://pep8ci.herokuapp.com/).
+* jQuery validation from [JSHint](https://jshint.com/).
 * Web page quality improvements assisted by [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
-* Web Accessibility Evaluation Tools by [WAVE](https://wave.webaim.org/)
 
+---
 
-## Testing
+## Project Testing
 
-See the document [TESTING.md](TESTING.md) for the code validation, automated and manual tests.
+See the document [TESTING.md](TESTING.md) for the code validation, site evaluation and manual tests.
 
+---
 
 ## Deployment
 
@@ -248,6 +333,7 @@ To log into the Heroku toolbelt CLI:
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
+---
 
 ## Credits
 
