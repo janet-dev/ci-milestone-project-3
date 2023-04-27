@@ -85,7 +85,8 @@ def about():
 
     :return:    Rendered about page
     '''
-    return render_template("about.html")
+    return
+    # return render_template("about.html")
 
 
 @app.route("/search", methods=["GET", "POST"])
