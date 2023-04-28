@@ -279,18 +279,30 @@ Outlines the reason for the app and it's instructions of use.
 * MongoDB ERD created by [DbSchema](https://dbschema.com/)
 
 ### Front-End
-* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) as the base for markup text.
-* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) for custom styling the site.
-* [jQuery](https://jquery.com/) for JavaScript functionality.
-* [Materialize CSS](https://materializecss.com/) is a modern responsive CSS framework based on Material Design by Google.
+
+- ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
+    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) as the base for markup text.
+- ![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
+    - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) for custom styling the site.
+- ![jQuery 3.5.1](https://img.shields.io/static/v1?label=jQuery&message=3.5.1&color=0769AD&logo=jquery&logoColor=ffffff)
+    - [jQuery 3.5.1](https://code.jquery.com/jquery/) for JavaScript functionality.
+- ![Materialize 1.0.0](https://img.shields.io/static/v1?label=Materialize&message=1.0.0&color=ee6e73)
+    - [Materialize 1.0.0](https://materializecss.com/) is a modern responsive CSS framework based on Material Design by Google.
 
 ### Back-End
-* [Python](https://www.python.org/) is a high-level, general-purpose programming language.
-* [MongoDB Atlas](https://www.mongodb.com/atlas) is a source-available cross-platform document-oriented database program.
-* [Flask](https://flask.palletsprojects.com/en/2.2.x/) is a micro web framework written in Python.
-* [Jinja 2](https://palletsprojects.com/p/jinja/) for templating with Flask.
-* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.2.x/) for password hashing, authentication and authorisation.
-* Project deployment provided by [Heroku](https://www.heroku.com/home).
+
+- ![Python](https://img.shields.io/static/v1?label=Python&message=3.8.11&color=blue&logo=python&logoColor=ffffff)
+    - [Python 3.8.11](https://www.python.org/) is a high-level, general-purpose programming language.
+- ![Flask](https://img.shields.io/static/v1?label=Flask&message=2.2&color=yellow&logo=flask)
+    - [Flask 2.2](https://flask.palletsprojects.com/en/2.2.x/) is a micro web framework written in Python.
+- ![Jinja](https://img.shields.io/static/v1?label=Jinja&message=2&color=E34F26&logo=jinja)
+    - [Jinja2](https://palletsprojects.com/p/jinja/) for templating with Flask.
+- ![Werkzeug](https://img.shields.io/static/v1?label=Werkzeug&message=2.2.3&color=orange&logo=werkzeug)
+    - [Werkzeug 2.2.3](https://werkzeug.palletsprojects.com/en/2.2.x/) for password hashing, authentication and authorisation.
+- ![Heroku](https://img.shields.io/static/v1?label=Heroku&message=PaaS&color=430098&logo=heroku)
+    - [Heroku](https://www.heroku.com) is used as *"Platform as a Service"* (PaaS) for app hosting.
+- ![MongoDB](https://img.shields.io/static/v1?label=MongoDB&message=5.0.15&color=brightgreen&logo=mongodb&logoColor=ffffff)
+    - [MongoDB Atlas 5.0.15](https://www.mongodb.com/atlas) is used as a non-relational database plugin via Heroku.
 
 ### Validation and Evaluation
 
