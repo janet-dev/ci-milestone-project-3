@@ -80,7 +80,8 @@ Materialize v1.0.0 was used for building the site - see the [supported browsers]
 
 Desktop audits by
 
-* Lighthouse:
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/):
+
     - [get_plants.html report](docs/testing/audit/lighthouse-get-plants-desktop.pdf)
 
     <h2 align="left"><img src="docs/testing/audit/lighthouse-get-plants-desktop.jpg"></h2>
@@ -121,8 +122,9 @@ Desktop audits by
 
     <h2 align="left"><img src="docs/testing/audit/lighthouse-login-desktop.jpg"></h2>
 
-    - 404.html report - Lighthouse was unable to generate, so used WebPageTest instead
-        - See the article [Why you should be testing your 404 pages web performance](https://nooshu.com/blog/2020/08/25/you-should-be-testing-your-404-pages-web-performance/) by Matt Hobbs on Nooshu.com
+    - 404.html report - Lighthouse was unable to generate, so used WebPageTest instead.
+
+        + See the article [Why you should be testing your 404 pages web performance](https://nooshu.com/blog/2020/08/25/you-should-be-testing-your-404-pages-web-performance/) by Matt Hobbs on Nooshu.com
 
     <h2 align="left"><img src="docs/testing/audit/lighthouse-404-desktop.jpg"></h2>
 
@@ -135,3 +137,59 @@ Desktop audits by
     - [500.html report](docs/testing/audit/webpagetest-500-desktop.pdf)
 
     <h2 align="left"><img src="docs/testing/audit/webpagetest-500-desktop.jpg"></h2>
+
+Mobile audits by
+
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/):
+
+    - [get_plants.html report](docs/testing/audit/lighthouse-get-plants-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-get-plants-mobile.jpg"></h2>
+
+    - [about.html report](docs/testing/audit/lighthouse-about-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-about-mobile.jpg"></h2>
+
+    - [profile.html report](docs/testing/audit/lighthouse-profile-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-profile-mobile.jpg"></h2>
+    
+    - [add_plant.html report](docs/testing/audit/lighthouse-add-plant-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-add-plant-mobile.jpg"></h2>
+
+    - [edit_plant.html report](docs/testing/audit/lighthouse-edit-plant-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-edit-plant-mobile.jpg"></h2>
+
+    - [delete_plant.html report](docs/testing/audit/lighthouse-delete-plant-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-delete-plant-mobile.jpg"></h2>
+
+    - [categories.html report](docs/testing/audit/lighthouse-get-categories-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-get-categories-mobile.jpg"></h2>
+    
+    - [add_category.html report](docs/testing/audit/lighthouse-add-category-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-add-category-mobile.jpg"></h2>
+
+    - [register.html report](docs/testing/audit/lighthouse-register-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-register-mobile.jpg"></h2>
+
+    - [login.html report](docs/testing/audit/lighthouse-login-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/lighthouse-login-mobile.jpg"></h2>
+
+* [WebPageTest](https://www.webpagetest.org/):
+
+    - [404.html report](docs/testing/audit/webpagetest-404-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/webpagetest-404-mobile.jpg"></h2>
+
+    - [500.html report](docs/testing/audit/webpagetest-500-mobile.pdf)
+
+    <h2 align="left"><img src="docs/testing/audit/webpagetest-500-mobile.jpg"></h2>
+
+   
