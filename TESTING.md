@@ -4,16 +4,16 @@
 
 ---
 
-## Table of Contents
+## Testing Contents
 
-1. [**Supported Browsers and Screen Sizes**](#supported-browsers-and-screen-sizes)
-2. [**Code Validation**](#code-validation)
-3. [**Site Audit**](#site-audit)
-4. [**Compatibility**](#compatibility)
-5. [**Bugs Found**](#bugs-found)
-6. [**Known Issues**](#known-issues)
+* [**Supported Browsers and Screen Sizes**](#supported-browsers-and-screen-sizes)
+* [**Code Validation**](#code-validation)
+* [**Site Audit**](#site-audit)
+* [**Compatibility**](#compatibility)
+* [**Bugs Found**](#bugs-found)
+* [**Known Issues**](#known-issues)
 
-[**Back to README**](README.md)
+Back to [**README.md**](README.md)
 
 ---
 

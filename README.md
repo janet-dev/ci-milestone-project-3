@@ -78,14 +78,13 @@ The site is designed to be responsive and accessible on a range of devices, maki
     - [**Back-End**](#back-end)
     - [**Validation and Evaluation**](#validation-and-evaluation)
 
-5. [**Project Testing**](TESTING.md)
-    - [**Manual Testing**](TESTING.md/#manual-testing)
+5. [**Manual Testing**](TESTING.md)
     - [**Supported Browsers and Screen Sizes**](TESTING.md/#supported-browsers-and-screen-sizes)
     - [**Code Validation**](TESTING.md/#code-validation)
     - [**Site Audit**](TESTING.md/#site-audit)
     - [**Compatibility**](TESTING.md/#compatibility)
     - [**Bugs Found**](TESTING.md/#bugs-found)
-    - [**Known Issues**]TESTING.md/(#known-issues)
+    - [**Known Issues**](TESTING.md/#known-issues)
 
 6. [**Deployment**](DEPLOYMENT.md)
     - [**Local Deployment**](DEPLOYMENT.md/#local-deployment)
