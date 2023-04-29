@@ -211,7 +211,7 @@ Table (Collection) Examples
     - 404 page not found and 500 internal server errors
  
 
-#### Navigation
+#### Navigation :compass:
 
 Navigation bar will be the default responsive Materialize one for all pages, except for the 404 and 500 error pages.
 
@@ -233,28 +233,35 @@ Navigation bar will be the default responsive Materialize one for all pages, exc
 
     - will feature the collapsed navigation with a hamburger icon, which when selected, will reveal a sidenav slide out menu with black text on a white background. On hover, the text background will change from white to light grey
 
-#### Home Page
+#### Home Page :bouquet:
 
 Features everyone's plant cards and a search panel.
 
-#### About
+#### About :information_source:
 
 Outlines the reason for the app and it's instructions of use.
 
+#### Log In :memo::pencil:
 
-#### Log In
+#### Register :bust_in_silhouette::heavy_plus_sign:
 
-#### Register
+#### Profile :lock:
 
-#### Profile
+#### Add Plant :seedling::heavy_plus_sign:
 
-#### Add Plant
+#### Edit Plant :pencil2:
 
-#### Add Category
+#### Delete Plant :scissors:
 
-#### Log Out
+#### Log Out :bust_in_silhouette::arrow_forward:
 
-#### 404 Page
+#### 404 Page :no_entry:
+
+#### 500 Page :warning:
+
+#### View Categories :gear::card_index_dividers:
+
+#### Add Category :gear::card_index_dividers::heavy_plus_sign:
 
 
 ### Future Features
