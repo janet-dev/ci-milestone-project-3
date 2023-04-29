@@ -1,10 +1,23 @@
-# Project Testing
+# Manual Testing
 
-## Manual Testing
+**The site was built, tested and validated on the [Chrome browser](docs/pictures/chrome.jpg) only.**
 
-**The site was built, tested and validated on the [Chrome browser](docs/testing/chrome-win10.jpg) only.**
+---
 
-### Supported Browsers and Screen Sizes
+## Table of Contents
+
+1. [**Supported Browsers and Screen Sizes**](#supported-browsers-and-screen-sizes)
+2. [**Code Validation**](#code-validation)
+3. [**Site Audit**](#site-audit)
+4. [**Compatibility**](#compatibility)
+5. [**Bugs Found**](#bugs-found)
+6. [**Known Issues**](#known-issues)
+
+[**Back to README**](README.md)
+
+---
+
+## Supported Browsers and Screen Sizes
 
 Materialize v1.0.0 was used for building the site - see the [supported browsers](https://github.com/Dogfalo/materialize).
 * Materialize is compatible with:
@@ -30,8 +43,9 @@ Materialize v1.0.0 was used for building the site - see the [supported browsers]
     | Desktop                  | .l             | > 992px    |
     | Large Desktop            | .xl            | > 1200px   |
 
+---
 
-### Code Validation
+## Code Validation
 * HTML - No errors or warnings were detected by [W3C](https://validator.w3.org/#validate_by_input) Validation for pages:
     - [get_plants.html PDF report](docs/testing/validation/w3c-html-get_plants.pdf)
     - [about.html PDF report](docs/testing/validation/w3c-html-about.pdf)
@@ -75,8 +89,9 @@ Materialize v1.0.0 was used for building the site - see the [supported browsers]
 
     <h2 align="left"><img src="docs/testing/validation/ci-pylinter-decorators.jpg"></h2>
 
+---
 
-### Site Audit
+## Site Audit
 
 Desktop audits by
 
@@ -192,4 +207,28 @@ Mobile audits by
 
     <h2 align="left"><img src="docs/testing/audit/webpagetest-500-mobile.jpg"></h2>
 
-   
+---
+
+## Compatibility
+
+The majority of testing and validation was carried out on the Chrome browser with a Windows 10 desktop, but to ensure that a broad range of users can successfully use this site, it was also tested with other browsers in both desktop and mobile configuration.
+
+- Chrome v.112
+- Edge v.18
+- Firefox v.106
+- Safari v.13
+- Opera v.97
+
+The results are shown below in a testing matrix:
+
+<h2 align="left"><img src="docs/testing/audit/compatibility.jpg"></h2>
+
+The original Excel version created by Tim Nelson, can be found [here](https://github.com/TravelTimN/ci-milestone04-dcd/blob/main/app/testing/testing-ci-milestone04-dcd.xlsx).
+
+---
+
+## Bugs Found
+
+---
+
+## Known Issues

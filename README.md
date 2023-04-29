@@ -79,6 +79,7 @@ The site is designed to be responsive and accessible on a range of devices, maki
     - [**Code Validation**](TESTING.md/#code-validation)
     - [**Site Audit**](TESTING.md/#site-audit)
     - [**Compatibility**](TESTING.md/#compatibility)
+    - [**Bugs Found**](TESTING.md/#bugs-found)
     - [**Known Issues**]TESTING.md/(#known-issues)
 
 6. [**Deployment**](DEPLOYMENT.md)
