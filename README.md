@@ -180,7 +180,7 @@ Database Entity Relationship Diagram (MongoDB)
 
 <h2 align="left"><img src="docs/pictures/db-erd.jpg"></h2>
 
-Table (Collection) Examples
+Collection (Table) Examples
 
 * Plants
 <h2 align="left"><img src="docs/pictures/db-plants.jpg"></h2>
@@ -387,7 +387,7 @@ Default/fallback plant image (pineapple wearing sunglasses) from [Heather Ford](
 
 Wallpaper for 404/500 page from [Maxim Berg](https://unsplash.com/@maxberg) on Unsplash
 
-Emoji shortcodes from [Ikatyang](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+Emoji shortcodes from [Ikatyang](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) on GitHub
 
 
 ### Code
