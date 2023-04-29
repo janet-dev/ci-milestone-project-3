@@ -1,3 +1,4 @@
+<h2 align="left"><img src="docs/pictures/am-i-responsive.jpg"></h2>
 
 ## Project Purpose
 
@@ -277,6 +278,7 @@ Outlines the reason for the app and it's instructions of use.
 * Favicon created on [favicon.cc](https://www.favicon.cc/).
 * Online photo editor from [Pixlr](https://pixlr.com/x/).
 * Stock photos from [Unsplash](https://unsplash.com).
+* Showcasing the site on different devices by [Bytes](https://ui.dev/amiresponsive)
 * Paint from [Microsoft](https://apps.microsoft.com/store/detail/paint/9PCFS5B6T72H?hl=en-us&gl=us)
 * Snip and Sketch from [Microsoft](https://apps.microsoft.com/store/detail/snipping-tool/9MZ95KL8MR0L?hl=en-gb&gl=gb)
 * PDF Reader from [Adobe Acrobat Reader](https://www.adobe.com/uk/)
