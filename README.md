@@ -37,7 +37,7 @@ The site also enhances the owner's goals by:
 
 [View the live project here.](https://vazy-garden.herokuapp.com/)
 
-The aim of the project is to provide a community site for garden and allotment enthusiasts. Users will be able to log in to create records for plants they wish to cultivate. It will be designed to aid the user in deciding which seeds to sow in a particular month. They will also be able to add if the plants are for pet or animal food. On the home page users will be able to see everyone's entries but on their own profile page they will only be able to view their own plants.
+The aim of the project is to provide a community site for garden and allotment enthusiasts. Users will be able to log in to create records for plants they wish to cultivate. It will be designed to aid the user in deciding which seeds or plants to set (sow/plant) in a particular month. They will also be able to add if the plants are for human (edible) or animal food. On the home page users will be able to see everyone's entries but on their own profile page they will only be able to view their own plants.
 
 The site is designed to be responsive and accessible on a range of devices, making it easy to use for potential users.
 
@@ -128,7 +128,7 @@ The site is designed to be responsive and accessible on a range of devices, maki
 
 - What is a CRUD app? This type of app allows the user to create, read, update and delete records or posts in a database via graphical interface. In this case the database is [MongoDB Atlas 5.0.15](https://www.mongodb.com/atlas) and as the app is developed with [Python 3.8.11](https://www.python.org/downloads/release/python-3811/), the graphical interface is provided by HTML5 and the mini-framework, [Flask 2.2](https://flask.palletsprojects.com/en/2.2.x/) with [Materialize CSS 1.0.0](https://materializecss.com/).
 
-- Why this app? Our household has an allotment and every year in the early spring, we excitely purchase lots of seeds for pretty flowers and delicious vegetables. These precious packets are then stored in a 'safe place' until the time comes for sowing. As usual - out of sight, out of mind - these seeds get forgotten about until it is too late. So I developed this app for like minded folk - here we can create our plant seed posts stating in which month they can be sown. A search facility on keywords allows the user to both search their own entries and others. The home does not require login, but profile pages do. All entries are visible to every one, but only the post owner can edit or delete them. 
+- Why this app? Our household has an allotment and every year in the early spring, we excitely purchase lots of seeds for pretty flowers and delicious vegetables. These precious packets are then stored in a 'safe place' until the time comes for sowing. As usual - out of sight, out of mind - these seeds get forgotten about until it is too late. So I developed this app for like minded folk - here we can create our plant posts stating in which month they can be set. A search facility on keywords allows the user to both search their own entries and others. The home page does not require login, but profile pages do. All entries are visible to every one, but only the post owner can edit or delete them. 
 
 - View the website design flowchart to see which Python functions are associated with which web pages of the app:
 
@@ -270,7 +270,7 @@ Outlines the reason for the app and it's instructions of use.
 
 ## Technologies Used
 
-* Developer platform from [Gitpod](https://www.gitpod.io/).
+* Cloud developer platform from [Gitpod](https://www.gitpod.io/).
 * IDE integrated into Gitpod from [Visual Studio Code](https://code.visualstudio.com/).
 * Debugging assisted by [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/).
 * Version control integrated into Gitpod from [Git](https://git-scm.com/).
