@@ -14,7 +14,7 @@
                         <label for="is_done">
                             <input type="checkbox" id="is_done" name="is_done">
                             <span class="lever"></span>
-                            Seeds Sown
+                            Done
                         </label>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <label for="plant_description" class="teal-text text-darken-4">Description</label>
                 </div>
             </div>
-            <!-- month for sowing -->
+            <!-- month for setting -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
@@ -60,7 +60,7 @@
                             <option value="{{ month.sow }}">{{ month.sow }}</option>
                         {% endfor %}
                     </select>
-                    <label for="sow" class="teal-text text-darken-4">Change Sow Month</label>
+                    <label for="sow" class="teal-text text-darken-4">Change Month</label>
                 </div>
             </div>
             <!-- is_edible toggle -->
@@ -87,7 +87,7 @@
                             <option value="{{ animal.animal_name }}">{{ animal.animal_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="animal_name" class="teal-text text-darken-4">Change Animal to Feed</label>
+                    <label for="animal_name" class="teal-text text-darken-4">Change Animal</label>
                 </div>
             </div>
             <!-- plant photo link -->
@@ -99,13 +99,13 @@
                     <label for="link" class="teal-text text-darken-4"><a href="https://unsplash.com/" target="_blank" class="links">Unsplash</a> Image</label>
                 </div>
             </div>
-            <!-- seed catalogue link -->
+            <!-- plant catalogue link -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="seed_link" name="seed_link" minlength="5" maxlength="150" type="text" class="validate" required
                         value="https://www.suttons.co.uk/">
-                    <label for="seed_link" class="teal-text text-darken-4">Buy <a href="https://www.suttons.co.uk/" target="_blank" class="links">Suttons</a> Seeds</label>
+                    <label for="seed_link" class="teal-text text-darken-4">Buy from <a href="https://www.suttons.co.uk/" target="_blank" class="links">Suttons</a></label>
                 </div>
             </div>         
             <!-- submit button -->

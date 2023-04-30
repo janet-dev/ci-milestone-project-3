@@ -18,7 +18,7 @@
                                 <input type="checkbox" id="is_done" name="is_done">
                             {% endif %}
                             <span class="lever"></span>
-                            Seeds Sown
+                            Done
                         </label>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                     <label for="plant_description" class="teal-text text-darken-4">Description</label>
                 </div>
             </div>
-            <!-- month dropdown for sowing -->
+            <!-- month dropdown for setting -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
@@ -74,7 +74,7 @@
                             {% endif %}
                         {% endfor %}
                     </select>
-                    <label for="sow" class="teal-text text-darken-4">Sow in</label>
+                    <label for="sow" class="teal-text text-darken-4">Set in</label>
                 </div>
             </div>
             <!-- is_edible toggle -->
@@ -127,7 +127,7 @@
                     <i class="fas fa-link prefix teal-text text-darken-4"></i>
                     <input id="seed_link" name="seed_link" minlength="5" maxlength="150" 
                     value="{{ plant.seed_link }}" type="text" class="validate" required>
-                    <label for="seed_link" class="teal-text text-darken-4">Buy <a href="https://www.suttons.co.uk/" target="_blank" class="links">Suttons</a> Seeds</label>
+                    <label for="seed_link" class="teal-text text-darken-4">Buy from <a href="https://www.suttons.co.uk/" target="_blank" class="links">Suttons</a></label>
                 </div>
             </div>         
             <!-- submit button -->
