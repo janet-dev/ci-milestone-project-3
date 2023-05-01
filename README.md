@@ -80,6 +80,8 @@ The site is designed to be responsive and accessible on a range of devices, maki
 
 5. [**Manual Testing**](TESTING.md)
     - [**Supported Browsers and Screen Sizes**](TESTING.md/#supported-browsers-and-screen-sizes)
+    - [**Testing Against User Stories**](TESTING.md/#testing-against-user-stories)
+    - [**Test Cases**](TESTING.md/#test-cases)
     - [**Code Validation**](TESTING.md/#code-validation)
     - [**Site Audit**](TESTING.md/#site-audit)
     - [**Compatibility**](TESTING.md/#compatibility)
@@ -433,7 +435,7 @@ Although the code is the work of the author, some of the code has been sourced f
 
 Many of the references have been embedded as links throughout this document and indicated by the active blue text links.
 
-The code is based on [Task Manager Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth)
+The code is based on [Task Manager Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth) by Tim Nelson
 
 Fort Knox Password generator from [RandomKeygen](https://randomkeygen.com/)
 
