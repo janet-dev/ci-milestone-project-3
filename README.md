@@ -213,58 +213,101 @@ Collection (Table) Examples
 
 #### Navigation :compass:
 
-Navigation bar will be the default responsive Materialize one for all pages, except for the 404 and 500 error pages.
+Navigation bar will be the default responsive Materialize one for all pages, except those for the 404 and 500 errors, which will have none.
 
 * Desktops
 
     <h2 align="left"><img src="docs/pictures/nav-desktop.jpg"></h2>
 
    - the menu items: Vazy Garden branding, Home, About, Profile, Add Plant, LogOut will be inline and fixed across the top of the screen. All pages will have white text on a teal banner and on hover, a dark teal backgound.
-    - Vazy Garden and Home will navigate to route /get_plants and render plants.html
-    - About to /about and render about.html
-    - Profile to /profile/(username) and render profile.html
-    - Add Plant to /add_plant and render add_plant.html
-    - Add Category (administrator user only) to /get_categories
-    - Log Out to /login and render login.html
+    - Vazy Garden and Home will navigate to route /get_plants and render plants.html.
+    - About to /about and render about.html.
+    - Profile to /profile/(username) and render profile.html.
+    - Add Plant to /add_plant and render add_plant.html.
+    - Add Category (administrator user only) to /get_categories.
+    - Log Out to /login and render login.html.
 
 * Mobiles 
 
     <h2 align="left"><img src="docs/pictures/nav-mobile.jpg"></h2>
 
-    - will feature the collapsed navigation with a hamburger icon, which when selected, will reveal a sidenav slide out menu with black text on a white background. On hover, the text background will change from white to light grey
+    - will feature the collapsed navigation with a hamburger icon, which when selected, will reveal a sidenav slide out menu with black text on a white background. On hover, the text background will change from white to light grey. This menu will contain the same items as the desktop one.
 
 #### Home Page :bouquet:
 
-Features everyone's plant cards and a search panel.
+Anyone (guest, member, administrator) can view this page which features everyone's plant cards and a search panel. The plant cards are laid out across the screen in alphabetical order of plant name.
 
 #### About :information_source:
 
-Outlines the reason for the app and it's instructions of use.
-
-#### Log In :bust_in_silhouette:
+Outlines the reason for the app and it's instructions for use.
 
 #### Register :bust_in_silhouette::heavy_plus_sign:
 
+Anybody can *register* for free and create their own unique profile to store their own plants to set. This is built using [Werkzeug](https://werkzeug.palletsprojects.com/en/2.2.x/) for password hashing, authentication and authorisation. Passwords are hashed for security purposes. Werkzeug is a comprehensive [WSGI](https://wsgi.readthedocs.io/en/latest/) (Web Server Gateway Interface) web application library.
+
+#### Log In :bust_in_silhouette:
+
+This facility is built using Flask [wrapper functions and decorators](https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/) for authentication and authorization in order to validate user details. Two login decorators have been created; one for registered users and another for the administrator.
+
 #### Profile :lock:
+
+Flask decorators protect users' profiles and data. Only the current logged-in owner can add, edit or delete their plants. The owner's plants are displayed across the screen in plant-name alphabetical order. Owners select the vertical ellipsis on each plant card to reveal delete/edit buttons.
 
 #### Add Plant :seedling::heavy_plus_sign:
 
+Logged-in users can add plants with the following information:
+- plant category e.g. flower, vegetable, etc
+- plant name
+- plant description
+- month to set (sow or plant)
+- indicate if *edible* (for humans)
+- specify an animal to feed
+- add an Unsplash image link
+- add plant catalogue link for easy purchase
+- indicate if the sowing or planting is *done*
+
 #### Edit Plant :pencil2:
+
+Logged-in users can only edit their own plants and update the plant information previously added. Owners select the vertical ellipsis on each plant card to reveal *edit* button. On selecting *edit*, they will then be taken to the *Edit Plant* page where they can change all fields and *update*, or otherwise *cancel* at any time.
 
 #### Delete Plant :scissors:
 
-#### Log Out :point_right:
+Logged-in users can only delete their own plants by selecting the vertical ellipsis on each plant card to reveal *delete* button. On selecting *delete*, they will then be taken to the *Delete Plant* page where they can confirm *delete*, or otherwise *cancel*.
+
+#### Log Out :arrow_forward:
+
+Logged-in users can *log out* of their account.
 
 #### 404 Page :no_entry:
 
+A 404 page-not-found is visible when the user tries to access an unknown page. This can happen if they mistype an url for a site page, e.g. mistype 
+```vazy-garden.herokuapp.com/loggin``` 
+instead of the correct one 
+```vazy-garden.herokuapp.com/login```
+A link back to the home page is provided.
+
 #### 500 Page :warning:
+
+A 500 internal server error page is visible when the server encounters an unexpected condition that prevents it from fulfilling a request. A link back to the home page is provided.
 
 #### View Categories :card_index_dividers:
 
+Only the **administrator** can view the page with the list of categories. From here they can navigate to the Add Category page.
+
 #### Add Category :card_index_dividers::heavy_plus_sign:
+
+Only the **administrator** can view this page in order to add categories.
 
 
 ### Future Features
+
+- Modify the administrator to be a named person, identified by an extra field in the database, e.g. admin: "yes".
+- Allow users to change their passwords.
+- Allow users to 'like' other's plants.
+- Allow users to 'borrow' other's plants for own profile, but not allow editing of these.
+- Allow the administrator to delete and edit categories
+- Allow users to message each other
+- Checking for inappropriate material.
 
 ---
 
