@@ -216,9 +216,6 @@ Collection (Table) Examples
 Navigation bar will be the default responsive Materialize one for all pages, except those for the 404 and 500 errors, which will have none.
 
 * Desktops
-
-    <h2 align="left"><img src="docs/pictures/nav-desktop.jpg"></h2>
-
    - the menu items: Vazy Garden branding, Home, About, Profile, Add Plant, LogOut will be inline and fixed across the top of the screen. All pages will have white text on a teal banner and on hover, a dark teal backgound.
     - Vazy Garden and Home will navigate to route /get_plants and render plants.html.
     - About to /about and render about.html.
@@ -228,9 +225,6 @@ Navigation bar will be the default responsive Materialize one for all pages, exc
     - Log Out to /login and render login.html.
 
 * Mobiles 
-
-    <h2 align="left"><img src="docs/pictures/nav-mobile.jpg"></h2>
-
     - will feature the collapsed navigation with a hamburger icon, which when selected, will reveal a sidenav slide out menu with black text on a white background. On hover, the text background will change from white to light grey. This menu will contain the same items as the desktop one.
 
 #### Home Page :bouquet:
@@ -274,7 +268,7 @@ Logged-in users can only edit their own plants and update the plant information 
 
 Logged-in users can only delete their own plants by selecting the vertical ellipsis on each plant card to reveal *delete* button. On selecting *delete*, they will then be taken to the *Delete Plant* page where they can confirm *delete*, or otherwise *cancel*.
 
-#### Log Out :arrow_forward:
+#### Log Out :point_right:
 
 Logged-in users can *log out* of their account.
 
