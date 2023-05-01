@@ -112,6 +112,8 @@ The site is designed to be responsive and accessible on a range of devices, maki
 - :white_check_mark: *easily understand how to use the site*.
 - :white_check_mark: *keep my information secure*.
 - :white_check_mark: *view the site without logging in*.
+- :white_check_mark: *search for plants to feed my pet*.
+- :white_check_mark: *search for plants that I need to set in a particular month*.
 
 ### Owner goals
 

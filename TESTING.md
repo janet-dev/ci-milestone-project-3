@@ -70,21 +70,44 @@ Materialize v1.0.0 was used for building the site - see the [supported browsers]
 
 - *keep my information secure*
     - Users need to register with a unique username and password. 
+
     <h2 align="left"><img src="docs/testing/user/register.jpg"></h2>
-    Passwords are hashed for security purposes by Werkzeug. This is a comprehensive [WSGI](https://wsgi.readthedocs.io/en/latest/) (Web Server Gateway Interface) web application library.
-    - Further security is provided by defensive programming and Flask login-decorators. There are two decorators for this site; one for users and another for the administrator. These decorators *wrap* the user/administrator editing functions and check if they are in fact the owner of the records:
+
+    - Passwords are hashed for security purposes by Werkzeug. This is a comprehensive [WSGI](https://wsgi.readthedocs.io/en/latest/) (Web Server Gateway Interface) web application library.
+
+    - Further security is provided by defensive programming and Flask login-decorators. There are two decorators for this site; one for users and another for the administrator. These decorators 'wrap' the user/administrator editing functions and check if they are in fact the owner of the records:
         - User login decorator for the profile page.
+
         <h2 align="left"><img src="docs/testing/user/login-decorator.jpg"></h2>
+
         The same decorator is used for the *log out / add plant* pages
         - Administrator login decorator for the category page.
+
         <h2 align="left"><img src="docs/testing/user/admin-decorator.jpg"></h2>
+
         The same decorator is used for the *add category* page.
-    For the *edit plant / delete plant* pages; a check is made to see if the current session user is the owner of the plant record. If not, they are taken to a 404 page.
+
+    - For the *edit plant / delete plant* pages; a check is made to see if the current session user is the owner of the plant record. If not, they are taken to a 404 page.
+
     <h2 align="left"><img src="docs/testing/user/defense.jpg"></h2>
 
 - *view the site without logging in*
     - Anyone can view all the plants on the home page, without registering or logging in:
+
     <h2 align="left"><img src="docs/testing/user/home.jpg"></h2>
+
+- *search for plants to feed my pet*
+    - Users are able to search on keywords from the fields:
+        - plant name
+        - plant description
+        - set month
+        - animal name
+
+    <h2 align="left"><img src="docs/testing/user/search-animal.jpg"></h2>
+
+- *search for plants that I need to set in a particular month*
+
+    <h2 align="left"><img src="docs/testing/user/search-month.jpg"></h2>
 
 ---
 
