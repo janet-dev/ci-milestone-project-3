@@ -6,12 +6,14 @@
 
 ## Testing Contents
 
-* [**Supported Browsers and Screen Sizes**](#supported-browsers-and-screen-sizes)
-* [**Code Validation**](#code-validation)
-* [**Site Audit**](#site-audit)
-* [**Compatibility**](#compatibility)
-* [**Bugs Found**](#bugs-found)
-* [**Known Issues**](#known-issues)
+- [**Supported Browsers and Screen Sizes**](#supported-browsers-and-screen-sizes)
+- [**Testing Against User Stories**](#testing-against-user-stories)
+- [**Test Cases**](#test-cases)
+- [**Code Validation**](#code-validation)
+- [**Site Audit**](#site-audit)
+- [**Compatibility**](#compatibility)
+- [**Bugs Found**](#bugs-found)
+- [**Known Issues**](#known-issues)
 
 Back to [**README.md**](README.md)
 
@@ -42,6 +44,51 @@ Materialize v1.0.0 was used for building the site - see the [supported browsers]
     | Tablet                   | .m             | > 600px    |
     | Desktop                  | .l             | > 992px    |
     | Large Desktop            | .xl            | > 1200px   |
+
+---
+
+## Testing Against User Stories
+
+"**_As a user, I would like to_** _____________________________"
+
+- *create, read, update and delete my own plant records*
+    - All logged-on users are able to view, add, edit or delete their own plants via appropriate pages:
+        - View
+        <h2 align="left"><img src="docs/testing/user/profile.jpg"></h2>
+        - Add
+        <h2 align="left"><img src="docs/testing/user/add.jpg"></h2>
+        - Edit or delete
+        <h2 align="left"><img src="docs/testing/user/edit-delete.jpg"></h2>
+        - Edit
+        <h2 align="left"><img src="docs/testing/user/edit.jpg"></h2>
+        - Delete
+        <h2 align="left"><img src="docs/testing/user/delete.jpg"></h2>
+
+- *easily understand how to use the site*
+    - Instructions on how to use the site are detailed on the **About** page.
+    <h2 align="left"><img src="docs/testing/user/about.jpg"></h2>
+
+- *keep my information secure*
+    - Users need to register with a unique username and password. 
+    <h2 align="left"><img src="docs/testing/user/register.jpg"></h2>
+    Passwords are hashed for security purposes by Werkzeug. This is a comprehensive [WSGI](https://wsgi.readthedocs.io/en/latest/) (Web Server Gateway Interface) web application library.
+    - Further security is provided by defensive programming and Flask login-decorators. There are two decorators for this site; one for users and another for the administrator. These decorators *wrap* the user/administrator editing functions and check if they are in fact the owner of the records:
+        - User login decorator for the profile page.
+        <h2 align="left"><img src="docs/testing/user/login-decorator.jpg"></h2>
+        The same decorator is used for the *log out / add plant* pages
+        - Administrator login decorator for the category page.
+        <h2 align="left"><img src="docs/testing/user/admin-decorator.jpg"></h2>
+        The same decorator is used for the *add category* page.
+    For the *edit plant / delete plant* pages; a check is made to see if the current session user is the owner of the plant record. If not, they are taken to a 404 page.
+    <h2 align="left"><img src="docs/testing/user/defense.jpg"></h2>
+
+- *view the site without logging in*
+    - Anyone can view all the plants on the home page, without registering or logging in:
+    <h2 align="left"><img src="docs/testing/user/home.jpg"></h2>
+
+---
+
+## Test Cases
 
 ---
 
