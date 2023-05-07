@@ -447,7 +447,10 @@ Adding custom validation to Materialize dropdown by [Tim Nelson](https://github.
 
 ## Acknowledgements
 
+Rachel Furlong - [EKC Training](https://ekcgroup.ac.uk/business-units/ekc-training) Course Facilitator, for generous support and advice.
+
 Rohit Sharma - [Code Institute](https://codeinstitute.net/) Mentor, for the continuous feedback and guidance in industry standards.
 
-Rachel Furlong - [EKC DigitalLearn](https://ekcgroup.ac.uk/business-units/ekc-digitallearn) Course Facilitator, for generous support and advice.
+Alan McGee - [Code Institute](https://codeinstitute.net/) Tutor, for assisting with some coding issues.
+
  

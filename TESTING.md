@@ -279,7 +279,7 @@ User was able to add link to a large image
 
 <h2 align="left"><img src="docs/testing/bugs/bug-03.jpg"></h2>
 
-- Solved by limiting the image size in the CSS
+- Solved by limiting the image size in the CSS. See [CodePen Home Materialize - Fixing Card Images](https://codepen.io/j_holtslander/pen/KbXyrq) by Jay Holtslander
 
 <h2 align="left"><img src="docs/testing/bugs/bug-03-soln.jpg"></h2>
 
@@ -303,13 +303,13 @@ User was able to add link to a large image
 
 <h2 align="left"><img src="docs/testing/bugs/bug-06.jpg"></h2>
 
-- Solved by converting the plant name to lowercase before storing in the database
+- Solved by converting the plant name to lowercase before storing in the database because uppercase letters are listed before lowercase
 
 <h2 align="left"><img src="docs/testing/bugs/bug-06-soln.jpg"></h2>
 
 7. Materialize form validation issue for dropdown selection on Chrome with Windows 10/11. 
 
-The dropdown fields for the Add Plant form showed the red underline on fields already selected. It did not affect the functionality as these records were still able to be added to the database. After discussion with the Code Institute tutor, we decide that this was a Chrome browser issue in Windows 10 (my PC) and 11 (tutor's PC). I had already cleared the cache, deleted all history, restarted Chrome, restarted Windows, checked Chrome was the latest version. This issue was not present for Chrome on Mac, iPhone or Android. 
+The dropdown fields for the Add Plant form showed the red underline on fields already selected. It did not affect the functionality as these records were still able to be added to the database. After discussion with the Alan McGee, Code Institute tutor, we decide that this was a Chrome browser issue in Windows 10 (my PC) and 11 (tutor's PC). I had already cleared the cache, deleted all history, restarted Chrome, restarted Windows, checked Chrome was the latest version. This issue was not present for Chrome on Mac, iPhone or Android. 
 
 <h2 align="left"><img src="docs/testing/bugs/bug-07.jpg"></h2>
 
@@ -344,7 +344,7 @@ The dropdown fields for the Add Plant form showed the red underline on fields al
 
 11. User mistypes Unsplash image link
 
-- Solved by adding a backup imaging informing the user of the broken link
+- Solved by adding a backup imaging informing the user of the broken link. See [Setting a Fallback Image in HTML for Broken or Missing Images](https://www.codu.co/articles/setting-a-fallback-image-in-html-for-broken-or-missing-images-otom_bhg) by Niall Maher on Codú
 
 <h2 align="left"><img src="docs/testing/bugs/bug-11-soln.jpg"></h2>
 
