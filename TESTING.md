@@ -247,6 +247,115 @@ The original Excel version created by Tim Nelson, can be found [here](https://gi
 
 ## Bugs Found
 
+1. Misalignment of Materialize grid columns
+
+<h2 align="left"><img src="docs/testing/bugs/bug-01.jpg"></h2>
+
+- Solved by assigning margin-left to 0 
+
+<h2 align="left"><img src="docs/testing/bugs/bug-01-soln.jpg"></h2>
+
+for both tablet and desktop
+
+<h2 align="left"><img src="docs/testing/bugs/bug-01-css.jpg"></h2>
+
+2. Unauthorised access to get_category page
+
+Whilst not logged in, a user was able to access this page by manually typing the url
+
+<h2 align="left"><img src="docs/testing/bugs/bug-02.jpg"></h2>
+
+- Solved by using a Flask [login required decorator](https://flask.palletsprojects.com/en/2.2.x/patterns/viewdecorators/). This decorator can be found in decorators.py
+
+<h2 align="left"><img src="docs/testing/bugs/bug-02-soln-decor.jpg"></h2>
+
+it is used to wrap the administrator functions in app.py
+
+<h2 align="left"><img src="docs/testing/bugs/bug-02-soln-app.jpg"></h2>
+
+3. Large card image
+
+User was able to add link to a large image
+
+<h2 align="left"><img src="docs/testing/bugs/bug-03.jpg"></h2>
+
+- Solved by limiting the image size in the CSS
+
+<h2 align="left"><img src="docs/testing/bugs/bug-03-soln.jpg"></h2>
+
+4. Overflow of branding and logo on mobiles
+
+<h2 align="left"><img src="docs/testing/bugs/bug-04.jpg"></h2>
+
+- Solved by adding separate media queries for default branding and an abreviated one for mobiles. See post from [George Kagan and FdM](https://stackoverflow.com/questions/39894291/how-to-change-text-not-font-size-according-to-screen-size-in-css) on Stack Overflow
+
+<h2 align="left"><img src="docs/testing/bugs/bug-04-soln.jpg"></h2>
+
+5. Duplicate categories
+
+<h2 align="left"><img src="docs/testing/bugs/bug-05.jpg"></h2>
+
+- Solved by converting category text to lowercase before checking if it exists in the database.
+
+<h2 align="left"><img src="docs/testing/bugs/bug-05-soln.jpg"></h2>
+
+6. Not listing plants in alphabetical order
+
+<h2 align="left"><img src="docs/testing/bugs/bug-06.jpg"></h2>
+
+- Solved by converting the plant name to lowercase before storing in the database
+
+<h2 align="left"><img src="docs/testing/bugs/bug-06-soln.jpg"></h2>
+
+7. Materialize form validation issue for dropdown selection on Chrome with Windows 10/11. 
+
+The dropdown fields for the Add Plant form showed the red underline on fields already selected. It did not affect the functionality as these records were still able to be added to the database. After discussion with the Code Institute tutor, we decide that this was a Chrome browser issue in Windows 10 (my PC) and 11 (tutor's PC). I had already cleared the cache, deleted all history, restarted Chrome, restarted Windows, checked Chrome was the latest version. This issue was not present for Chrome on Mac, iPhone or Android. 
+
+<h2 align="left"><img src="docs/testing/bugs/bug-07.jpg"></h2>
+
+- Solved - As Windows with Chrome is a very popular setup, this issue could not be ignored, so I decided to set default values for the dropdown selections on the Add Plant form - this was inspired by the Edit Plant form not presenting this validation issue.
+
+<h2 align="left"><img src="docs/testing/bugs/bug-07-soln.jpg"></h2>
+<h2 align="left"><img src="docs/testing/bugs/bug-07-soln-form.jpg"></h2>
+
+8. W3C error for section tag containing Flash messages in template, base.html
+
+<h2 align="left"><img src="docs/testing/bugs/bug-08.jpg"></h2>
+
+- Solved by replacing the section tags with div ones
+
+<h2 align="left"><img src="docs/testing/bugs/bug-08-soln.jpg"></h2>
+
+9. W3C error on add_plant.html for option element of select element with a required attribute
+
+<h2 align="left"><img src="docs/testing/bugs/bug-09.jpg"></h2>
+
+- Solved by removing the required attribute - there is already a default selected
+
+<h2 align="left"><img src="docs/testing/bugs/bug-09-soln.jpg"></h2>
+
+10. W3C error on edit_plant.html for select element cannot have more than one select option descendent
+
+<h2 align="left"><img src="docs/testing/bugs/bug-10.jpg"></h2>
+
+- Solved by setting the value attribute as an empty string as the value is selected in for-loop of the Jinja code
+
+<h2 align="left"><img src="docs/testing/bugs/bug-10-soln.jpg"></h2>
+
+11. User mistypes Unsplash image link
+
+- Solved by adding a backup imaging informing the user of the broken link
+
+<h2 align="left"><img src="docs/testing/bugs/bug-11-soln.jpg"></h2>
+
 ---
 
 ## Known Issues
+
+<h2 align="left"><img src="docs/testing/bugs/bug-00.jpg"></h2>
+
+* The error was removed by running the site on Chrome in Incognito mode.
+Stack Overflow user [Chrostip Schaejn](https://stackoverflow.com/questions/72494154/a-listener-indicated-an-asynchronous-response-by-returning-true-but-the-messag) advised that this error was cause by various Chrome extensions.
+
+---
+
