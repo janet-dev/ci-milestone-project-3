@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fab fa-pagelines prefix teal-text text-darken-4"></i>
-                    <input id="plant_name" name="plant_name" minlength="3" maxlength="50" 
+                    <input id="plant_name" name="plant_name" minlength="3" maxlength="15" 
                     value="{{ plant.plant_name }}" type="text" class="validate" required>
                     <label for="plant_name" class="teal-text text-darken-4">Name</label>
                 </div>
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix teal-text text-darken-4"></i>
-                    <textarea id="plant_description" name="plant_description" minlength="5" maxlength="200"
+                    <textarea id="plant_description" name="plant_description" minlength="5" maxlength="100"
                         class="materialize-textarea validate" required>
                         {{- plant.plant_description -}}
                     </textarea>
