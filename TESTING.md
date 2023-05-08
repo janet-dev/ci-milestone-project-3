@@ -352,10 +352,18 @@ The dropdown fields for the Add Plant form showed the red underline on fields al
 
 ## Known Issues
 
+1. The error was removed by running the site on Chrome in Incognito mode.
+
 <h2 align="left"><img src="docs/testing/bugs/bug-00.jpg"></h2>
 
-* The error was removed by running the site on Chrome in Incognito mode.
+
 Stack Overflow user [Chrostip Schaejn](https://stackoverflow.com/questions/72494154/a-listener-indicated-an-asynchronous-response-by-returning-true-but-the-messag) advised that this error was cause by various Chrome extensions.
+
+2. Fallback image for when a user mistypes the image address on forms
+
+<h2 align="left"><img src="static/img/fallback_image.jpg"></h2>
+
+This causes a 404 error in the console and should only be used as an indicator of a broken link. The moderator should discourage users from leaving any links broken.
 
 ---
 
