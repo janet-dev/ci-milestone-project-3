@@ -143,15 +143,56 @@ Note that some limited defensive programming is included in order to build a mor
 
 The following logs detail the testing carried out:
 
+---
+
+#### Register Page
+
+<h2 align="left"><img src="docs/testing/testcases/testcases-register.jpg"></h2>
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register2-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 2
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register-02.jpg"></h2>
+    - Step 3
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register-03.jpg"></h2>
+    - Step 4
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register-04.jpg"></h2>
+    - Step 5
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register-05.jpg"></h2>
+    - Step 6
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register-06.jpg"></h2>
+    - Step 6 - database
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register-06b.jpg"></h2>
+    - Step 8
+    <h2 align="left"><img src="docs/testing/testcases/testcases-register-08.jpg"></h2>
+    - Access Denied
+    <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+---
+
 #### About Page
+
+<h2 align="left"><img src="docs/testing/testcases/testcases-about.jpg"></h2>
+
 
 - Results
 
     <h2 align="left"><img src="docs/testing/testcases/testcases-about-xls.jpg"></h2>
 
-- Screenshot
+- Screenshots
 
-    <h2 align="left"><img src="docs/testing/testcases/testcases-about.jpg"></h2>
+    - Access Denied
+    <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+
+
 
 
 
