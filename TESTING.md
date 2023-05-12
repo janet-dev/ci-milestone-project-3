@@ -113,6 +113,50 @@ Materialize v1.0.0 was used for building the site - see the [supported browsers]
 
 ## Test Cases
 
+These cases are included in order to help the next developer understand the design of the site and how to extend it. They document the look and functionality of each page. All pages and features will function and look the same whether on desktop, tablet or mobile, except for the 
+- shorter branding (**Vazy** instead of **Vazy Garden**) and *hamburger* menu for mobiles and some tablets
+
+    <h2 align="left"><img src="docs/testing/testcases/nav-hamburger.jpg"></h2>
+
+    When the menu icon is selected, it reveals a sliding lefthand panel listing the menu options. Select an option to navigate to the appropriate page.
+
+    <h2 align="left"><img src="docs/testing/testcases/nav-mobile.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/nav-tablet.jpg"></h2>
+
+
+- number of cards displayed across the screen:
+    - desktops tend to show three cards across
+
+    <h2 align="left"><img src="docs/testing/testcases/home-desktop.jpg"></h2>
+
+    - tablets tend to show two cards across
+
+    <h2 align="left"><img src="docs/testing/testcases/home-tablet.jpg"></h2>
+    
+    - mobiles tend to show one card across
+
+    <h2 align="left"><img src="docs/testing/testcases/home-mobile.jpg"></h2>
+
+### Test Case Logs
+
+Note that some limited defensive programming is included in order to build a more secure app, but it is outside the scope of the project criteria.
+
+The following logs detail the testing carried out:
+
+#### About Page
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-about-xls.jpg"></h2>
+
+- Screenshot
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-about.jpg"></h2>
+
+
+
+[Test Case Template](https://www.guru99.com/download-sample-test-case-template-with-explanation-of-important-fields.html) provided by Thomas Hamilton on GURU99
+
 ---
 
 ## Code Validation

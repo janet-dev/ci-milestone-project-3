@@ -443,6 +443,7 @@ Fort Knox Password generator from [RandomKeygen](https://randomkeygen.com/)
 
 Adding custom validation to Materialize dropdown by [Tim Nelson](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
 
+
 ---
 
 ## Acknowledgements
