@@ -212,6 +212,31 @@ The following logs detail the testing carried out:
 
 ---
 
+#### Home Page (Anyone - Registration/Log In Not Required)
+
+<h2 align="left"><img src="docs/testing/testcases/testcases-home.jpg"></h2>
+
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home1-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 3
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-03.jpg"></h2>
+    - Step 5
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-06.jpg"></h2>
+    - Step 10
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-10.jpg"></h2>
+    - Access Denied
+    <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+
+---
+
 #### About Page
 
 <h2 align="left"><img src="docs/testing/testcases/testcases-about.jpg"></h2>
