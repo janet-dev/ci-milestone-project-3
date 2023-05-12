@@ -174,6 +174,42 @@ The following logs detail the testing carried out:
     <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
     - 404 Page
     <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+
+---
+
+#### Log In Page
+
+<h2 align="left"><img src="docs/testing/testcases/testcases-login.jpg"></h2>
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login2-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 2
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login-02.jpg"></h2>
+    - Step 3
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login-03.jpg"></h2>
+    - Step 4
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login-04.jpg"></h2>
+    - Step 5
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login-05.jpg"></h2>
+    - Step 6
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login-06.jpg"></h2>
+    - Incorrect User
+    <h2 align="left"><img src="docs/testing/testcases/testcases-incorrect-user.jpg"></h2>
+    - Step 11
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login-11.jpg"></h2>
+    - Step 12
+    <h2 align="left"><img src="docs/testing/testcases/testcases-login-12.jpg"></h2>
+
+    - Access Denied
+    <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+
 ---
 
 #### About Page
