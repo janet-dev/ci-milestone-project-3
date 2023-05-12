@@ -216,11 +216,10 @@ The following logs detail the testing carried out:
 
 <h2 align="left"><img src="docs/testing/testcases/testcases-home.jpg"></h2>
 
-
 - Results
 
     <h2 align="left"><img src="docs/testing/testcases/testcases-home1-xls.jpg"></h2>
-    <h2 align="left"><img src="docs/testing/testcases/testcases-home1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home2-xls.jpg"></h2>
 
 - Screenshots
 
@@ -234,6 +233,50 @@ The following logs detail the testing carried out:
     <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
     - 404 Page
     <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+
+---
+
+#### Home Page (Log In Required)
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login2-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login3-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 3
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-03.jpg"></h2>
+    - Step 4
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-05.jpg"></h2>
+    - Step 5
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-05a.jpg"></h2>
+    - Step 5 - Database
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-05b.jpg"></h2>
+    - Step 7
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-07.jpg"></h2>
+    - Step 11
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-11.jpg"></h2>
+    - Step 13
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-13.jpg"></h2>
+    - Step 14
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-15.jpg"></h2>
+    - Step 15
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-15a.jpg"></h2>
+    - Step 15 - Database
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-15b.jpg"></h2>
+    - Step 23
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-22.jpg"></h2>
+    - Step 24
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-24.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-24a.jpg"></h2>
+    - Access Denied
+    <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+    - Log Out
+    <h2 align="left"><img src="docs/testing/testcases/testcases-logged-out.jpg"></h2>
 
 ---
 

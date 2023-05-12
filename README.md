@@ -418,11 +418,7 @@ Markdown Cheatsheet from [Adam Pritchard](https://github.com/adam-p/markdown-her
 
 Plant images from [Dean Lewis](https://unsplash.com/@infinitecreations21) on Unsplash
 
-Cucumber plant image from [Kelly Neil](https://unsplash.com/@baconandbaileys) on Unsplash
-
 Forget-me-not image from [Noah Boyer](https://unsplash.com/@emerald_) on Unsplash
-
-Barley field image from [Kai Pilger](https://unsplash.com/@kaip) on Unsplash
 
 Default/fallback plant image (pineapple wearing sunglasses) from [Heather Ford](https://unsplash.com/@the_modern_life_mrs) on Unsplash
 
