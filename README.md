@@ -435,10 +435,10 @@ Many of the references have been embedded as links throughout this document and 
 
 The code is based on [Task Manager Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth) by Tim Nelson
 
-Fort Knox Password generator from [RandomKeygen](https://randomkeygen.com/)
+[Fort Knox Password Generator](https://randomkeygen.com/) from RandomKeygen
 
-Adding custom validation to Materialize dropdown by [Tim Nelson](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
-
+[Adding custom validation to Materialize dropdown](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
+ by Tim Nelson
 
 ---
 
