@@ -701,7 +701,7 @@ Stack Overflow user [Chrostip Schaejn](https://stackoverflow.com/questions/72494
 
 2. Fallback image for when a user mistypes the image address on forms
 
-<h2 align="left"><img src="static/img/fallback_image.jpg"></h2>
+<h2 align="left"><img src="docs/testing/testcases/testcases-form-add-16.jpg"></h2>
 
 This causes a 404 error in the console and should only be used as an indicator of a broken link. The moderator should discourage users from leaving any links broken.
 
