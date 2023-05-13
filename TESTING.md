@@ -334,8 +334,92 @@ The following logs detail the testing carried out:
     - Log Out
     <h2 align="left"><img src="docs/testing/testcases/testcases-logged-out.jpg"></h2>
 
+---
 
+#### Add Plant Form (Log In Required)
 
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add2-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 4
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-04.jpg"></h2>
+    - Step 5
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-05.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-05b.jpg"></h2>
+    - Step 6
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-06.jpg"></h2>
+    - Step 7
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-08.jpg"></h2>
+    - Step 10
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-10.jpg"></h2>
+    - Step 11
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-13.jpg"></h2>
+    - Step 14
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-14.jpg"></h2>
+    - Step 16
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-add-16.jpg"></h2>
+    - Access Denied
+    <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+    - Log Out
+    <h2 align="left"><img src="docs/testing/testcases/testcases-logged-out.jpg"></h2>
+
+---
+
+#### Edit Plant Form (Log In Required)
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-edit1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-form-edit2-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 4
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-15.jpg"></h2>
+
+    - Steps 5 to 11 have the same form validation as the Add Plant form above
+
+    - Step 17
+    <h2 align="left"><img src="docs/testing/testcases/testcases-home-login-15a.jpg"></h2>
+    - Access Denied
+    <h2 align="left"><img src="docs/testing/testcases/testcases-access-denied.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+    - Log Out
+    <h2 align="left"><img src="docs/testing/testcases/testcases-logged-out.jpg"></h2>
+
+---
+
+#### Categories Page (Admin Login Required)
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 3
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-03.jpg"></h2>
+    - Step 4
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-04.jpg"></h2>
+    - Step 3
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-03.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
+    - Step 10
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-10.jpg"></h2>
+    - Step 11
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-11.jpg"></h2>
+    - Log Out
+    <h2 align="left"><img src="docs/testing/testcases/testcases-logged-out.jpg"></h2>
+
+---
 
 [Test Case Template](https://www.guru99.com/download-sample-test-case-template-with-explanation-of-important-fields.html) provided by Thomas Hamilton on GURU99
 
