@@ -1,64 +1,103 @@
 ## Deployment
 
-### Gitpod LocalHost Deployment
+Notes sourced from [Tim Nelson](https://github.com/TravelTimN/ci-milestone04-dcd/edit/main/README.md)
 
-1. To run a frontend (HTML, CSS, Javascript only) application in Gitpod, [in the terminal](docs/pictures/deploy-python.jpg), type:
-	```python
-	python3 -m http.server
-	```
-2. A blue button should appear to click: [_Make Public_](docs/pictures/deploy-port-8000.jpg),
-3. Another similar blue button should appear to click: _Open Browser_. If this is not seen, click on the:
-	* [_Ports icon_](docs/pictures/deploy-port-browser.jpg) **1** then the port address or globe icon **2** to run the project in a new browser tab.
+### Local Deployment
 
-The ports can also be accessed via the bottom blue banner, where it shows [_Ports: 8000_](docs/pictures/deploy-open-port.jpg)
+Please note - in order to run this project locally on your own system, you will need the following installed:
+- [Python3](https://www.python.org/downloads) to run the application.
+- [PIP](https://pip.pypa.io/en/stable/installation/) to install all app requirements.
+- Any IDE such as [Microsoft Visual Studio Code](https://code.visualstudio.com).
+- [GIT](https://www.atlassian.com/git/tutorials/install-git) for cloning and version control.
+- [MongoDB](https://www.mongodb.com) to develop your own database either locally or remotely on MongoDB Atlas.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal.
+Next, there's a series of steps to take in order to proceed with local deployment:
 
-### GitHub Pages
+- Clone this GitHub repository by either clicking the green *Clone or download* button and downloading the project as a zip-file (remember to unzip it first)
 
-The project was deployed to GitHub Pages using the following steps...
+- Navigate to the correct file location after unpacking the files
+    - `cd <path to folder>`
+- Create a `env.py` file with your credentials. 
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-	- [See the screenshot](docs/pictures/github1.jpg)
-2. At the top of the Repository (not top of page), locate the ["Settings" Button](docs/pictures/github2.jpg) on the menu.
-3. Scroll down the Settings page until you locate the ["Pages" Section](docs/pictures/github3.jpg) on the left hand side.
-4. Under "Branch", click the dropdown called "None" and [select "main"](docs/pictures/github4.jpg).
-5. Branch section should look like [this screenshot](docs/pictures/github5.jpg). Wait a few minutes for the page to automatically refresh.
-6. Scroll back to top of the page to locate the now published site in the ["GitHub Pages" section](docs/pictures/github6.jpg). Copy this link.
-7. Go back to your repository and select the [Setting gear icon](docs/pictures/github7.jpg) to the right of "About".
-8. Paste your url into the [box under "Website"](docs/pictures/github8.jpg) and click the "Save Changes" button.
-9. You now have a [link for everyone](docs/pictures/github9.jpg) to use from your repository.
+	<h2 align="left"><img src="docs/pictures/deploy-env.jpg"></h2>
 
-### Forking the GitHub Repository
+	Be sure to include your *MONGO_URI* and *SECRET_KEY* values.
+- Install all requirements from the requirements.txt file using this command:
+    - `sudo -H pip3 -r requirements.txt`
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+	<h2 align="left"><img src="docs/pictures/deploy-requirements.jpg"></h2>
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+- Sign up for a free account on [MongoDB](https://www.mongodb.com) and create a new Database called **vazy_garden**. The *Collections* (tables) in that database should be as follows:
 
-### Making a Local Clone
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
+**plants**
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+_id: <ObjectId>
+category_name: <string>
+plant_name: <string>
+plant_description: <string>
+sow: <string>
+is_edible: <string>
+is_done: <string>
+animal_name: <string>
+link: <string>
+seed_link: <string>
+created_by: <string>
 ```
 
-7. Press Enter. Your local clone will be created.
-
+**categories**
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
+_id: <ObjectId>
+category_name: <string>
 ```
 
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+**months**
+```
+_id: <ObjectId>
+sow: <string>
+```
+
+**animals**
+```
+_id: <ObjectId>
+animal_name: <string>
+```
+
+**users**
+```
+_id: <ObjectId>
+username: <string>
+password: <string>
+```
+
+- You should now be able to launch your app using the following command in your terminal:
+    - `flask run`
+- The app should now be running on *localhost* on an address similar to `http://127.0.0.1:5000`. Simply copy/paste this into the browser of your choice! More information [here](https://code.visualstudio.com/docs/python/tutorial-flask).
+
+### Remote Deployment
+
+This site is currently deployed on [Heroku](https://www.heroku.com/) using the **main** branch on GitHub. To implement this project on Heroku, the following steps were taken:
+
+1. Create a **requirements.txt** file so Heroku can install the required dependencies to run the app.
+    - `sudo pip3 freeze --local > requirements.txt`
+
+	<h2 align="left"><img src="docs/pictures/deploy-requirements.jpg"></h2>
+
+2. Create a **Procfile** to tell Heroku what type of application is being deployed, and how to run it.
+    - `echo web: python app.py > Procfile`
+
+	<h2 align="left"><img src="docs/pictures/deploy-procfile.jpg"></h2>
+
+	- Make sure there are no blanks lines at the end of the file!
+
+3. Sign up for a free Heroku account, create your project app, and click the **Deploy** tab, at which point you can *Connect GitHub* as the Deployment Method, and select *Enable Automatic Deployment*.
+
+4. In the Heroku **Settings** tab, click on the *Reveal Config Vars* button to configure environmental variables as follows:
+    - **IP** : 0.0.0.0
+    - **PORT** : 5000
+    - **SECRET_KEY** : <your_own_secret_key>
+    - **MONGO_URI** : <link_to_your_MongoDB>
+    - **MONGO_DBNAME** : vazy_garden
+    - **DEBUG** : False
+
+5. Your app should be successfully deployed to Heroku at this point.
+
