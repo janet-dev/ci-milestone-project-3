@@ -408,14 +408,44 @@ The following logs detail the testing carried out:
     <h2 align="left"><img src="docs/testing/testcases/testcases-categories-03.jpg"></h2>
     - Step 4
     <h2 align="left"><img src="docs/testing/testcases/testcases-categories-04.jpg"></h2>
-    - Step 3
-    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-03.jpg"></h2>
     - 404 Page
     <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
     - Step 10
     <h2 align="left"><img src="docs/testing/testcases/testcases-categories-10.jpg"></h2>
     - Step 11
     <h2 align="left"><img src="docs/testing/testcases/testcases-categories-11.jpg"></h2>
+    - Log Out
+    <h2 align="left"><img src="docs/testing/testcases/testcases-logged-out.jpg"></h2>
+
+---
+
+#### Add Category Page (Admin Login Required)
+
+- Results
+
+    <h2 align="left"><img src="docs/testing/testcases/testcases-category-add1-xls.jpg"></h2>
+    <h2 align="left"><img src="docs/testing/testcases/testcases-category-add2-xls.jpg"></h2>
+
+- Screenshots
+
+    - Step 3
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-03.jpg"></h2>
+    - Step 4
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-04.jpg"></h2>
+    - Step 5
+    <h2 align="left"><img src="docs/testing/testcases/testcases-categories-10.jpg"></h2>
+    - Step 6
+    <h2 align="left"><img src="docs/testing/testcases/testcases-category-add-06.jpg"></h2>
+    - Step 7
+    <h2 align="left"><img src="docs/testing/testcases/testcases-category-add-07.jpg"></h2>
+    - Step 8
+    <h2 align="left"><img src="docs/testing/testcases/testcases-category-add-08.jpg"></h2>
+    - Step 9
+    <h2 align="left"><img src="docs/testing/testcases/testcases-category-add-09.jpg"></h2>
+    - Step 11
+    <h2 align="left"><img src="docs/testing/testcases/testcases-category-add-11.jpg"></h2>
+    - 404 Page
+    <h2 align="left"><img src="docs/testing/testcases/testcases-404.jpg"></h2>
     - Log Out
     <h2 align="left"><img src="docs/testing/testcases/testcases-logged-out.jpg"></h2>
 
