@@ -172,11 +172,65 @@ The following Materialize [colour scheme](https://materializecss.com/color.html)
 
 ### Wireframes
 
-Mobile
+View the wireframe PDF [here](docs/ux/wireframe-mp3.pdf).
 
-Tablet [wireframes](docs/ux/wireframe-mp3.pdf)
+The pages contain the same functionality and look the same on every device, with the exception to the menus and the number of plant cards displayed across the screen.
 
-Desktop
+#### Tablet 
+
+- Home
+
+<h2 align="left"><img src="docs/ux/tablet-home.jpg"></h2>
+
+- Profile
+
+<h2 align="left"><img src="docs/ux/tablet-profile.jpg"></h2>
+
+- Add / Edit Plants Form
+
+<h2 align="left"><img src="docs/ux/tablet-update.jpg"></h2>
+
+- Categories
+
+<h2 align="left"><img src="docs/ux/tablet-categories.jpg"></h2>
+
+- Register
+
+<h2 align="left"><img src="docs/ux/tablet-register.jpg"></h2>
+
+- Log In
+
+<h2 align="left"><img src="docs/ux/tablet-login.jpg"></h2>
+
+- Logged Out Screen
+
+<h2 align="left"><img src="docs/ux/tablet-logout.jpg"></h2>
+
+- Menu
+
+    - Logged In
+
+    <h2 align="left"><img src="docs/ux/tablet-menu-login.jpg"></h2>
+
+    - Logged Out
+
+    <h2 align="left"><img src="docs/ux/tablet-menu-logout.jpg"></h2>
+
+#### Desktop
+
+- Home
+
+<h2 align="left"><img src="docs/ux/desktop-home.jpg"></h2>
+
+- Other Pages - same as for tablet
+
+#### Mobile
+
+- Home
+
+<h2 align="left"><img src="docs/ux/mobile-home.jpg"></h2>
+
+- Other Pages - same as for tablet
 
 ### Non-Relational Database
 
