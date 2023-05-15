@@ -5,9 +5,9 @@
 To run the project locally, install:
 - [Python3](https://www.python.org/downloads) to run the app
 - [PIP](https://pip.pypa.io/en/stable/installation/) to install all app requirements
-- [Microsoft Visual Studio Code](https://code.visualstudio.com)
+- [Microsoft Visual Studio Code](https://visualstudio.microsoft.com/)
 - [GIT](https://www.atlassian.com/git/tutorials/install-git) for version control
-- [MongoDB Atlas](https://www.mongodb.com) to develop the database
+- [MongoDB Atlas](https://www.mongodb.com/atlas) to develop the database
 
 For local deployment:
 
