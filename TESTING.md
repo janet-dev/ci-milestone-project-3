@@ -448,7 +448,7 @@ The following logs detail the testing carried out:
     - [add_plant.html PDF report](docs/testing/validation/w3c-html-addplant.pdf)
     - [edit_plant.html PDF report](docs/testing/validation/w3c-html-editplant.pdf)
     - [delete_plant.html PDF report](docs/testing/validation/w3c-html-deleteplant.pdf)
-    - [categories.html PDF report](docs/testing/validation/w3c-html-categories.pdf)
+    - [categories.html PDF report](docs/testing/validation/w3c-html-getcategories.pdf)
     - [add_category.html PDF report](docs/testing/validation/w3c-html-addcategory.pdf)
     - [register.html PDF report](docs/testing/validation/w3c-html-register.pdf)
     - [login.html PDF report](docs/testing/validation/w3c-html-login.pdf)
