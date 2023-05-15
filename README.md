@@ -93,7 +93,6 @@ The site is designed to be responsive and accessible on a range of devices, maki
     - [**Remote Deployment**](DEPLOYMENT.md/#remote-deployment)
 
 7. [**Credits**](#credits)
-    - [**Content**](#content)
     - [**Media**](#media)
     - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
