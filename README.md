@@ -2,7 +2,7 @@
 
 ## Project Purpose
 
-This is a Code Institute student project for Milestone 3, built to satisfy the requirements for the EKC DigitalLearn Diploma (Level 5) in [Web Application Development](https://www.ekcgroup.ac.uk/ekc-digitallearn/computing/web-application-development-diploma). 
+This is a Code Institute student project for Milestone 3, built to satisfy the requirements for the EKC DigitalLearn Diploma (Level 5) in [Web Application Development](https://www.ekcgroup.ac.uk/ekc-training/computing/web-application-development-diploma-level-5). 
 
 This project has been created in order to provide a community CRUD application on a deployed interactive website. The project was built using **Gitpod**. 
 
@@ -434,28 +434,6 @@ See the document [DEPLOYMENT.md](DEPLOYMENT.md) for local and Heroku deployment.
 
 ---
 
-## Gitpod Reminders
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
 ## Credits
 
 A huge thank you to the following people and organisations, because without you, the website would not have been produced in it's present form.
@@ -491,8 +469,9 @@ The code is based on [Task Manager Tutorial](https://github.com/Code-Institute-S
 
 [Fort Knox Password Generator](https://randomkeygen.com/) from RandomKeygen
 
-[Adding custom validation to Materialize dropdown](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
- by Tim Nelson
+[Adding custom validation to Materialize dropdown](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) by Tim Nelson
+
+[Flask Decorators - Login_Required pages Flask Tutorial](https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/) by Sentdex on YouTube
 
 ---
 
