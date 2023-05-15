@@ -4,21 +4,6 @@
 
 ---
 
-## Testing Contents
-
-- [**Supported Browsers and Screen Sizes**](#supported-browsers-and-screen-sizes)
-- [**Testing Against User Stories**](#testing-against-user-stories)
-- [**Test Cases**](#test-cases)
-- [**Code Validation**](#code-validation)
-- [**Site Audit**](#site-audit)
-- [**Compatibility**](#compatibility)
-- [**Bugs Found**](#bugs-found)
-- [**Known Issues**](#known-issues)
-
-Back to [**README.md**](README.md)
-
----
-
 ## Supported Browsers and Screen Sizes
 
 Materialize v1.0.0 was used for building the site - see the [supported browsers](https://github.com/Dogfalo/materialize).
@@ -457,14 +442,14 @@ The following logs detail the testing carried out:
 
 ## Code Validation
 * HTML - No errors or warnings were detected by [W3C](https://validator.w3.org/#validate_by_input) Validation for pages:
-    - [get_plants.html PDF report](docs/testing/validation/w3c-html-get_plants.pdf)
+    - [get_plants.html PDF report](docs/testing/validation/w3c-html-getplants.pdf)
     - [about.html PDF report](docs/testing/validation/w3c-html-about.pdf)
     - [profile.html PDF report](docs/testing/validation/w3c-html-profile.pdf)
-    - [add_plant.html PDF report](docs/testing/validation/w3c-html-add_plant.pdf)
-    - [edit_plant.html PDF report](docs/testing/validation/w3c-html-edit_plant.pdf)
-    - [delete_plant.html PDF report](docs/testing/validation/w3c-html-delete_plant.pdf)
+    - [add_plant.html PDF report](docs/testing/validation/w3c-html-addplant.pdf)
+    - [edit_plant.html PDF report](docs/testing/validation/w3c-html-editplant.pdf)
+    - [delete_plant.html PDF report](docs/testing/validation/w3c-html-deleteplant.pdf)
     - [categories.html PDF report](docs/testing/validation/w3c-html-categories.pdf)
-    - [add_category.html PDF report](docs/testing/validation/w3c-html-add_category.pdf)
+    - [add_category.html PDF report](docs/testing/validation/w3c-html-addcategory.pdf)
     - [register.html PDF report](docs/testing/validation/w3c-html-register.pdf)
     - [login.html PDF report](docs/testing/validation/w3c-html-login.pdf)
     - [404.html PDF report](docs/testing/validation/w3c-html-404.pdf)

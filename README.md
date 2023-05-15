@@ -471,6 +471,8 @@ The code is based on [Task Manager Tutorial](https://github.com/Code-Institute-S
 
 [Adding custom validation to Materialize dropdown](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) by Tim Nelson
 
+[View Decorators](https://flask.palletsprojects.com/en/2.2.x/patterns/viewdecorators/) documentation from Flask
+
 [Flask Decorators - Login_Required pages Flask Tutorial](https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required/) by Sentdex on YouTube
 
 ---
