@@ -35,7 +35,9 @@ The site also enhances the owner's goals by:
 ![Flask](https://img.shields.io/static/v1?label=Flask&message=2.2&color=yellow&logo=flask)
 ![MongoDB](https://img.shields.io/static/v1?label=MongoDB&message=5.0.15&color=brightgreen&logo=mongodb&logoColor=ffffff)
 
-[View the demo video on YouTube.](https://youtu.be/LbvWNagwn6c)
+[View the deployed app on Heroku.](https://vazy-garden.herokuapp.com/)
+
+[View the video demo on YouTube.](https://youtu.be/LbvWNagwn6c)
 
 The aim of the project is to provide a community site for garden and allotment enthusiasts. Users will be able to log in to create records for plants they wish to cultivate. It will be designed to aid the user in deciding which seeds or plants to set (sow/plant) in a particular month. They will also be able to add if the plants are for human (edible) or animal food. On the home page users will be able to see everyone's entries but on their own profile page they will only be able to view their own plants.
 
